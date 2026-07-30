@@ -128,8 +128,8 @@ class TestGetDividendEvents:
         mock_t.dividends = divs
         mock_t.history.return_value = hist
         with patch("dividend_analysis.ticker_loader.yf.Ticker", return_value=mock_t):
-            df = get_dividend_events("AAPL", years=1)
-        assert df.iloc[0]["drop_less_than_div"] is True   # 0.2 < 0.25
+            df = get_dividend_events("AAPL", years=5)
+        assert df.iloc[0]["drop_less_than_div"] == True   # 0.2 < 0.25
 
     def test_drop_greater_than_div_false(self):
         divs = pd.Series([0.10], index=pd.to_datetime(["2024-03-15"]))
@@ -138,5 +138,5 @@ class TestGetDividendEvents:
         mock_t.dividends = divs
         mock_t.history.return_value = hist
         with patch("dividend_analysis.ticker_loader.yf.Ticker", return_value=mock_t):
-            df = get_dividend_events("AAPL", years=1)
-        assert df.iloc[0]["drop_less_than_div"] is False   # 0.5 > 0.10
+            df = get_dividend_events("AAPL", years=5)
+        assert df.iloc[0]["drop_less_than_div"] == False   # 0.5 > 0.10

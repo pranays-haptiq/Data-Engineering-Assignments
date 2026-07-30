@@ -1,12 +1,23 @@
 """Prefect tasks wrapping core business logic."""
 from __future__ import annotations
 
+import logging
 import subprocess
 from datetime import timedelta
 
 import pandas as pd
 from prefect import get_run_logger, task
+from prefect.exceptions import MissingContextError
 from prefect.tasks import task_input_hash
+
+
+def _logger(name: str = __name__):
+    """Return Prefect run logger inside a flow/task, else standard logger."""
+    try:
+        return get_run_logger()
+    except MissingContextError:
+        return logging.getLogger(name)
+
 
 from dividend_analysis.db_utils import (
     create_tables,
@@ -24,8 +35,8 @@ from dividend_analysis.ticker_loader import (
 
 @task(name="create-db-tables", retries=2, retry_delay_seconds=5)
 def create_tables_task() -> None:
-    logger = get_run_logger()
-    logger.info("Creating database tables …")
+    log = _logger()
+    log.info("Creating database tables …")
     create_tables()
 
 
@@ -37,18 +48,18 @@ def create_tables_task() -> None:
     cache_expiration=timedelta(hours=6),
 )
 def filter_tickers_task(tickers: list[str], year: int) -> list[str]:
-    logger = get_run_logger()
-    logger.info("Filtering %d candidates for dividends paid in %d …", len(tickers), year)
+    log = _logger()
+    log.info("Filtering %d candidates for dividends paid in %d …", len(tickers), year)
     qualified = filter_tickers_with_dividends(tickers, year)
-    logger.info("%d tickers qualified.", len(qualified))
+    log.info("%d tickers qualified.", len(qualified))
     return qualified
 
 
 @task(name="sample-tickers")
 def sample_tickers_task(qualified: list[str], n: int, seed: int) -> list[str]:
-    logger = get_run_logger()
+    log = _logger()
     selected = sample_tickers(qualified, n=n, seed=seed)
-    logger.info("Sampled %d tickers: %s", len(selected), selected)
+    log.info("Sampled %d tickers: %s", len(selected), selected)
     return selected
 
 
@@ -65,8 +76,8 @@ def get_ticker_info_task(ticker: str) -> dict:
 
 @task(name="upsert-ticker-metadata", retries=2, retry_delay_seconds=5)
 def upsert_tickers_task(ticker_infos: list[dict]) -> None:
-    logger = get_run_logger()
-    logger.info("Upserting metadata for %d tickers.", len(ticker_infos))
+    log = _logger()
+    log.info("Upserting metadata for %d tickers.", len(ticker_infos))
     upsert_tickers(ticker_infos)
 
 
@@ -78,8 +89,8 @@ def upsert_tickers_task(ticker_infos: list[dict]) -> None:
     cache_expiration=timedelta(hours=6),
 )
 def fetch_events_task(ticker: str, years: int = 5) -> pd.DataFrame:
-    logger = get_run_logger()
-    logger.info("Fetching %d-year dividend events for %s …", years, ticker)
+    log = _logger()
+    log.info("Fetching %d-year dividend events for %s …", years, ticker)
     return get_dividend_events(ticker, years=years)
 
 
@@ -93,34 +104,33 @@ def concat_events_task(dfs: list[pd.DataFrame]) -> pd.DataFrame:
 
 @task(name="upsert-dividend-events", retries=2, retry_delay_seconds=5)
 def upsert_events_task(events_df: pd.DataFrame) -> None:
-    logger = get_run_logger()
-    logger.info("Upserting %d dividend events …", len(events_df))
+    log = _logger()
+    log.info("Upserting %d dividend events …", len(events_df))
     upsert_dividend_events(events_df)
 
 
 @task(name="analyze-favorable-tickers")
 def analyze_favorable_task(events_df: pd.DataFrame) -> pd.DataFrame:
-    logger = get_run_logger()
+    log = _logger()
     summary = find_favorable_tickers(events_df)
     if not summary.empty:
-        logger.info("Ticker summary:\n%s", summary.to_string(index=False))
+        log.info("Ticker summary:\n%s", summary.to_string(index=False))
     return summary
 
 
 @task(name="run-dbt-pipeline", retries=1, retry_delay_seconds=10)
 def run_dbt_task(project_dir: str) -> None:
-    """Run dbt deps → run → test using dbt-core's Python module."""
-    logger = get_run_logger()
-
+    """Run dbt deps → run → test."""
+    log = _logger()
     for cmd in [
-        ["python", "-m", "dbt", "deps", "--project-dir", project_dir],
-        ["python", "-m", "dbt", "run", "--project-dir", project_dir],
-        ["python", "-m", "dbt", "test", "--project-dir", project_dir],
+        ["dbt", "deps", "--project-dir", project_dir],
+        ["dbt", "run",  "--project-dir", project_dir],
+        ["dbt", "test", "--project-dir", project_dir],
     ]:
-        logger.info("Running: %s", " ".join(cmd))
+        log.info("Running: %s", " ".join(cmd))
         result = subprocess.run(cmd, capture_output=True, text=True)
         if result.stdout:
-            logger.info(result.stdout)
+            log.info(result.stdout)
         if result.returncode != 0:
-            logger.error(result.stderr)
+            log.error(result.stderr)
             raise RuntimeError(f"dbt command failed: {' '.join(cmd)}\n{result.stderr}")

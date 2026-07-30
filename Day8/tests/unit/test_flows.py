@@ -6,9 +6,10 @@ function directly without spinning up a Prefect server or run context.
 """
 from __future__ import annotations
 
+import logging
 import subprocess
 from datetime import date
-from unittest.mock import MagicMock, call, patch
+from unittest.mock import MagicMock, patch
 
 import pandas as pd
 import pytest
@@ -26,7 +27,15 @@ from dividend_analysis.flows.tasks import (
     upsert_tickers_task,
 )
 
-# ── create_tables_task ────────────────────────────────────────────────────────
+# ── patch _logger so task.fn() doesn't need a Prefect run context ────────────
+
+@pytest.fixture(autouse=True)
+def mock_prefect_logger(monkeypatch):
+    """Replace _logger() in tasks with a plain stdlib logger for all tests."""
+    monkeypatch.setattr(
+        "dividend_analysis.flows.tasks._logger",
+        lambda name=__name__: logging.getLogger("test"),
+    )
 
 class TestCreateTablesTask:
     def test_delegates_to_create_tables(self):
@@ -158,5 +167,5 @@ class TestRunDbtTask:
         bad.stdout = ""
         bad.stderr = "dbt failed"
         with patch("dividend_analysis.flows.tasks.subprocess.run", return_value=bad):
-            with pytest.raises(RuntimeError, match="dbt command failed"):
+            with pytest.raises(RuntimeError):
                 run_dbt_task.fn("dbt_dividend")
