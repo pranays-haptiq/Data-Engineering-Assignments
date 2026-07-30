@@ -1,0 +1,50 @@
+version: 2
+
+sources:
+  - name: greenwheel
+    schema: public
+    description: "Raw GreenWheel seed data loaded from CSV files."
+    tables:
+      - name: raw_users
+        columns:
+          - name: user_id
+            tests:
+              - unique
+              - not_null
+      - name: raw_bikes
+        columns:
+          - name: bike_id
+            tests:
+              - unique
+              - not_null
+      - name: raw_trips
+        columns:
+          - name: trip_id
+            tests:
+              - unique
+              - not_null
+
+models:
+  - name: stg_users
+    description: "Staging model for users. Names are uppercased, emails are lowercased."
+    columns:
+      - name: user_id
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_bikes
+    description: "Staging model for bikes. Renames model_type to bike_model."
+    columns:
+      - name: bike_id
+        tests:
+          - unique
+          - not_null
+
+  - name: fct_bike_usage
+    description: "Fact table showing total cost and total minutes ridden per bike."
+    columns:
+      - name: bike_id
+        tests:
+          - unique
+          - not_null

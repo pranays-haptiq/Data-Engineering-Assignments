@@ -1,0 +1,55 @@
+version: 2
+
+sources:
+  - name: dividend_db
+    schema: public
+    description: "Raw dividend event data loaded by the Python analysis pipeline."
+    tables:
+      - name: dividend_events
+        description: "One row per ticker × ex-dividend date."
+        columns:
+          - name: id
+            tests:
+              - unique
+              - not_null
+          - name: ticker
+            tests:
+              - not_null
+          - name: ex_date
+            tests:
+              - not_null
+          - name: dividend_amount
+            tests:
+              - not_null
+              - dbt_expectations.expect_column_values_to_be_between:
+                  min_value: 0
+                  strictly: true
+      - name: nasdaq_dividend_tickers
+        description: "Metadata for all loaded Nasdaq tickers."
+        columns:
+          - name: ticker
+            tests:
+              - unique
+              - not_null
+
+models:
+  - name: stg_dividend_events
+    description: "Cleaned staging view of dividend events with valid prices."
+    columns:
+      - name: ticker
+        tests:
+          - not_null
+      - name: ex_date
+        tests:
+          - not_null
+      - name: dividend_amount
+        tests:
+          - not_null
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+              strictly: true
+      - name: price_drop
+        tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: -500
+              max_value: 500
