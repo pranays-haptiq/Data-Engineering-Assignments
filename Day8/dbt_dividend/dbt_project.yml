@@ -1,0 +1,21 @@
+name: dbt_dividend
+version: '1.0.0'
+profile: dbt_dividend
+
+model-paths: ["models"]
+test-paths: ["tests"]
+macro-paths: ["macros"]
+seed-paths: ["seeds"]
+analysis-paths: ["analyses"]
+snapshot-paths: ["snapshots"]
+
+clean-targets:
+  - target
+  - dbt_packages
+
+models:
+  dbt_dividend:
+    staging:
+      +materialized: view
+    marts:
+      +materialized: table
