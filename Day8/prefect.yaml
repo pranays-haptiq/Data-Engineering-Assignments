@@ -1,0 +1,16 @@
+name: nasdaq-dividend-analysis
+prefect-version: "3.0.0"
+
+deployments:
+  - name: daily-run
+    description: "Daily Nasdaq dividend analysis pipeline"
+    entrypoint: dividend_analysis/flows/pipeline.py:dividend_pipeline
+    schedule:
+      cron: "0 6 * * 1-5"   # 6 AM on weekdays
+    parameters:
+      n_tickers: 25
+      seed: 42
+      dbt_project_dir: dbt_dividend
+    tags:
+      - dividend
+      - nasdaq

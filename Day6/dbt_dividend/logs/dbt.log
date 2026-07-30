@@ -1,0 +1,1962 @@
+[0m18:19:11.676283 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b433a6a3380>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b4339177d90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b4339177b10>]}
+
+
+============================== 18:19:11.683403 | 7e2f85a5-8903-42d5-b78c-c7832bb5d0ba ==============================
+[0m18:19:11.683403 [info ] [MainThread]: Running with dbt=1.12.0
+[0m18:19:11.684595 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'empty': 'False', 'log_cache_events': 'False', 'log_path': '/home/pranays/Documents/Learning/Data-Engineering-Assignments/Day6/dbt_dividend/logs', 'use_experimental_parser': 'False', 'quiet': 'False', 'target_path': 'None', 'maximum_seed_size_mib': '1', 'invocation_command': 'dbt run', 'indirect_selection': 'eager', 'fail_fast': 'False', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'hints_enabled': 'True', 'warn_error': 'None', 'partial_parse': 'True', 'version_check': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/pranays/.dbt', 'send_anonymous_usage_stats': 'True', 'write_json': 'True', 'use_colors': 'True', 'introspect': 'True', 'log_format': 'default', 'no_print': 'None', 'debug': 'False'}
+[0m18:19:12.003939 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '7e2f85a5-8903-42d5-b78c-c7832bb5d0ba', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b433a41eea0>]}
+[0m18:19:12.103857 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '7e2f85a5-8903-42d5-b78c-c7832bb5d0ba', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b43391e3790>]}
+[0m18:19:12.105246 [info ] [MainThread]: Registered adapter: postgres=1.11.0
+[0m18:19:12.178586 [error] [MainThread]: [[31mERROR[0m]: Encountered an error:
+Compilation Error
+  dbt expects 1 package(s) based on packages specified in packages.yml, but found only 0 package(s) installed in dbt_packages. Run "dbt deps" to install package dependencies.
+[0m18:19:12.179978 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 0.6081708, "process_in_blocks": "0", "process_kernel_time": 0.24874, "process_mem_max_rss": "122832", "process_out_blocks": "8", "process_user_time": 2.341561}
+[0m18:19:12.180686 [debug] [MainThread]: Command `dbt run` failed at 18:19:12.180552 after 0.61 seconds
+[0m18:19:12.181205 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b43393e3b50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b43393e2a50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b43393176b0>]}
+[0m18:19:12.181768 [debug] [MainThread]: Flushing usage events
+[0m18:19:13.301101 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m18:19:35.207733 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x747c0abab380>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x747c097dbed0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x747c097db750>]}
+
+
+============================== 18:19:35.212368 | ec5e6d97-0c14-4d43-855a-eb44bccdf9a3 ==============================
+[0m18:19:35.212368 [info ] [MainThread]: Running with dbt=1.12.0
+[0m18:19:35.213115 [debug] [MainThread]: running dbt with arguments {'use_colors': 'True', 'log_format': 'default', 'profiles_dir': '/home/pranays/.dbt', 'warn_error': 'None', 'log_cache_events': 'False', 'quiet': 'False', 'partial_parse': 'True', 'introspect': 'True', 'invocation_command': 'dbt deps', 'use_experimental_parser': 'False', 'indirect_selection': 'eager', 'log_path': '/home/pranays/Documents/Learning/Data-Engineering-Assignments/Day6/dbt_dividend/logs', 'version_check': 'True', 'maximum_seed_size_mib': '1', 'target_path': 'None', 'hints_enabled': 'True', 'send_anonymous_usage_stats': 'True', 'cache_selected_only': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'debug': 'False', 'no_print': 'None', 'write_json': 'True', 'empty': 'None', 'printer_width': '80', 'fail_fast': 'False', 'static_parser': 'True'}
+[0m18:19:35.416969 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'ec5e6d97-0c14-4d43-855a-eb44bccdf9a3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x747c0a71aea0>]}
+[0m18:19:35.435702 [debug] [MainThread]: Set downloads directory='/tmp/dbt-downloads-cvpbyagt'
+[0m18:19:35.436578 [debug] [MainThread]: Making package index registry request: GET https://hub.getdbt.com/api/v1/index.json
+[0m18:19:35.521856 [debug] [MainThread]: Response from registry index: GET https://hub.getdbt.com/api/v1/index.json 200
+[0m18:19:35.524620 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/calogica/dbt_expectations.json
+[0m18:19:35.813042 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/calogica/dbt_expectations.json 200
+[0m18:19:35.817389 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+The `calogica/dbt_expectations` package is deprecated in favor of
+`metaplane/dbt_expectations`. Please update your `packages.yml` configuration to
+use `metaplane/dbt_expectations` instead.
+[0m18:19:35.818559 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': 'ec5e6d97-0c14-4d43-855a-eb44bccdf9a3', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x747c095b8c00>]}
+[0m18:19:35.828266 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/calogica/dbt_date.json
+[0m18:19:36.297966 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/calogica/dbt_date.json 200
+[0m18:19:36.314029 [info ] [MainThread]: Updating lock file in file path: /home/pranays/Documents/Learning/Data-Engineering-Assignments/Day6/dbt_dividend/package-lock.yml
+[0m18:19:36.318659 [debug] [MainThread]: Set downloads directory='/tmp/dbt-downloads-urr7_gwy'
+[0m18:19:36.323177 [info ] [MainThread]: Installing calogica/dbt_expectations
+[0m18:19:36.985611 [info ] [MainThread]: Installed from version 0.10.4
+[0m18:19:36.986350 [info ] [MainThread]: Up to date!
+[0m18:19:36.986896 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': 'ec5e6d97-0c14-4d43-855a-eb44bccdf9a3', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x747c09441050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x747c09440a50>]}
+[0m18:19:36.987411 [info ] [MainThread]: Installing calogica/dbt_date
+[0m18:19:52.309434 [info ] [MainThread]: Installed from version 0.10.1
+[0m18:19:52.310362 [info ] [MainThread]: Up to date!
+[0m18:19:52.310889 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': 'ec5e6d97-0c14-4d43-855a-eb44bccdf9a3', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x747c095bfa70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x747c0957f150>]}
+[0m18:19:52.312880 [warn ] [MainThread]: [[33mWARNING[0m][DeprecationsSummary]: Deprecated functionality
+Summary of encountered deprecations:
+- PackageRedirectDeprecation: 2 occurrences
+To see all deprecation instances instead of just the first occurrence of each,
+run command again with the `--show-all-deprecations` flag. You may also need to
+run with `--no-partial-parse` as some deprecations are only encountered during
+parsing.
+[0m18:19:52.314284 [debug] [MainThread]: Resource report: {"command_name": "deps", "command_success": true, "command_wall_clock_time": 17.211958, "process_in_blocks": "0", "process_kernel_time": 0.313815, "process_mem_max_rss": "123872", "process_out_blocks": "20872", "process_user_time": 2.365075}
+[0m18:19:52.314952 [debug] [MainThread]: Command `dbt deps` succeeded at 18:19:52.314828 after 17.21 seconds
+[0m18:19:52.315506 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x747c094d9e60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x747c09aea5d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x747c095b2390>]}
+[0m18:19:52.315999 [debug] [MainThread]: Flushing usage events
+[0m18:19:53.446769 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m18:20:04.128491 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77f8749ab380>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77f87347fd90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77f87347fb10>]}
+
+
+============================== 18:20:04.134916 | 65672fa5-5764-4b31-a8db-4144b0a20bfc ==============================
+[0m18:20:04.134916 [info ] [MainThread]: Running with dbt=1.12.0
+[0m18:20:04.135751 [debug] [MainThread]: running dbt with arguments {'log_path': '/home/pranays/Documents/Learning/Data-Engineering-Assignments/Day6/dbt_dividend/logs', 'quiet': 'False', 'cache_selected_only': 'False', 'introspect': 'True', 'fail_fast': 'False', 'empty': 'False', 'hints_enabled': 'True', 'use_colors': 'True', 'debug': 'False', 'printer_width': '80', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'send_anonymous_usage_stats': 'True', 'profiles_dir': '/home/pranays/.dbt', 'use_experimental_parser': 'False', 'no_print': 'None', 'maximum_seed_size_mib': '1', 'partial_parse': 'True', 'target_path': 'None', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'warn_error': 'None', 'invocation_command': 'dbt run', 'version_check': 'True', 'log_format': 'default'}
+[0m18:20:04.402284 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '65672fa5-5764-4b31-a8db-4144b0a20bfc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77f87452aea0>]}
+[0m18:20:04.497687 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '65672fa5-5764-4b31-a8db-4144b0a20bfc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77f8734eb790>]}
+[0m18:20:04.499106 [info ] [MainThread]: Registered adapter: postgres=1.11.0
+[0m18:20:04.600551 [debug] [MainThread]: checksum: 0ac4f707b0185b5e4d53a2a15915f56053932fe74d2684ef0085d7d509366ebb, vars: {}, profile: dbt_dividend, target: dev, version: 1.12.0
+[0m18:20:04.601625 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m18:20:04.602213 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '65672fa5-5764-4b31-a8db-4144b0a20bfc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77f8721c0550>]}
+[0m18:20:06.620255 [warn ] [MainThread]: [[33mWARNING[0m][MissingArgumentsPropertyInGenericTestDeprecation]: Deprecated
+functionality
+Found top-level arguments to test
+`dbt_expectations.expect_column_values_to_be_between` defined on
+'stg_dividend_events' in package 'dbt_dividend' (models/staging/schema.yml).
+Arguments to generic tests should be nested under the `arguments` property.
+[0m18:20:06.620975 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '65672fa5-5764-4b31-a8db-4144b0a20bfc', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77f871dcd9a0>]}
+[0m18:20:07.084340 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '65672fa5-5764-4b31-a8db-4144b0a20bfc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77f86ef5e6d0>]}
+[0m18:20:07.249682 [debug] [MainThread]: Wrote artifact WritableManifest to /home/pranays/Documents/Learning/Data-Engineering-Assignments/Day6/dbt_dividend/target/manifest.json
+[0m18:20:07.252900 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/pranays/Documents/Learning/Data-Engineering-Assignments/Day6/dbt_dividend/target/semantic_manifest.json
+[0m18:20:07.269120 [debug] [MainThread]: Wrote artifact OsiDocument to /home/pranays/Documents/Learning/Data-Engineering-Assignments/Day6/dbt_dividend/target/osi_document.json
+[0m18:20:07.281984 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '65672fa5-5764-4b31-a8db-4144b0a20bfc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77f86ed072b0>]}
+[0m18:20:07.282708 [info ] [MainThread]: Found 4 models, 28 data tests, 2 sources, 744 macros
+[0m18:20:07.283217 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '65672fa5-5764-4b31-a8db-4144b0a20bfc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77f86efb4f50>]}
+[0m18:20:07.285974 [info ] [MainThread]: 
+[0m18:20:07.286581 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m18:20:07.287002 [info ] [MainThread]: 
+[0m18:20:07.287683 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m18:20:07.293832 [debug] [ThreadPool]: Acquiring new postgres connection 'list_postgres'
+[0m18:20:07.341259 [debug] [ThreadPool]: Using postgres connection "list_postgres"
+[0m18:20:07.341906 [debug] [ThreadPool]: On list_postgres: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "dbt_dividend", "target_name": "dev", "connection_name": "list_postgres"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m18:20:07.342381 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:20:07.360537 [debug] [ThreadPool]: SQL status: SELECT 4 in 0.018 seconds
+[0m18:20:07.363481 [debug] [ThreadPool]: On list_postgres: Close
+[0m18:20:07.366105 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_postgres, now list_postgres_public)
+[0m18:20:07.378301 [debug] [ThreadPool]: Using postgres connection "list_postgres_public"
+[0m18:20:07.379484 [debug] [ThreadPool]: On list_postgres_public: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "dbt_dividend", "target_name": "dev", "connection_name": "list_postgres_public"} */
+select
+      'postgres' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      'postgres' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+    union all
+    select
+      'postgres' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public'
+    union all
+    select distinct
+     'postgres' as database,
+     proname as name,
+     ns.nspname as schema,
+     'function' as type
+    from pg_proc
+     join pg_namespace as ns on pronamespace = ns.oid
+    where ns.nspname ilike 'public'
+  
+[0m18:20:07.380493 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m18:20:07.406892 [debug] [ThreadPool]: SQL status: SELECT 8 in 0.026 seconds
+[0m18:20:07.409470 [debug] [ThreadPool]: On list_postgres_public: ROLLBACK
+[0m18:20:07.410551 [debug] [ThreadPool]: On list_postgres_public: Close
+[0m18:20:07.417828 [debug] [MainThread]: Using postgres connection "master"
+[0m18:20:07.418710 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "dbt_dividend", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m18:20:07.419461 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m18:20:07.446936 [debug] [MainThread]: SQL status: SELECT 2 in 0.027 seconds
+[0m18:20:07.450242 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '65672fa5-5764-4b31-a8db-4144b0a20bfc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77f86e405020>]}
+[0m18:20:07.451063 [debug] [MainThread]: On master: ROLLBACK
+[0m18:20:07.452099 [debug] [MainThread]: On master: COMMIT
+[0m18:20:07.452815 [debug] [MainThread]: Using postgres connection "master"
+[0m18:20:07.453383 [debug] [MainThread]: On master: COMMIT
+[0m18:20:07.454706 [debug] [MainThread]: SQL status: COMMIT in 0.001 seconds
+[0m18:20:07.455588 [debug] [MainThread]: On master: Close
+[0m18:20:07.461050 [debug] [Thread-1 (]: Began running node model.dbt_dividend.stg_dividend_events
+[0m18:20:07.462451 [info ] [Thread-1 (]: 1 of 4 START sql view model public.stg_dividend_events ......................... [RUN]
+[0m18:20:07.463837 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_postgres_public, now model.dbt_dividend.stg_dividend_events)
+[0m18:20:07.464784 [debug] [Thread-1 (]: Began compiling node model.dbt_dividend.stg_dividend_events
+[0m18:20:07.476527 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_dividend.stg_dividend_events"
+[0m18:20:07.478229 [debug] [Thread-1 (]: Began executing node model.dbt_dividend.stg_dividend_events
+[0m18:20:07.523744 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_dividend.stg_dividend_events"
+[0m18:20:07.524907 [debug] [Thread-1 (]: Using postgres connection "model.dbt_dividend.stg_dividend_events"
+[0m18:20:07.525561 [debug] [Thread-1 (]: On model.dbt_dividend.stg_dividend_events: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "dbt_dividend", "target_name": "dev", "node_id": "model.dbt_dividend.stg_dividend_events"} */
+
+  create view "postgres"."public"."stg_dividend_events__dbt_tmp"
+    
+    
+  as (
+    
+
+select
+    ticker,
+    ex_date,
+    dividend_amount,
+    price_day_before,
+    price_on_ex_date,
+    price_drop,
+    drop_less_than_div
+from "postgres"."public"."dividend_events"
+where dividend_amount > 0
+  and price_day_before is not null
+  and price_on_ex_date is not null
+  );
+[0m18:20:07.526060 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:20:07.541837 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.016 seconds
+[0m18:20:07.549602 [debug] [Thread-1 (]: Using postgres connection "model.dbt_dividend.stg_dividend_events"
+[0m18:20:07.550718 [debug] [Thread-1 (]: On model.dbt_dividend.stg_dividend_events: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "dbt_dividend", "target_name": "dev", "node_id": "model.dbt_dividend.stg_dividend_events"} */
+alter table "postgres"."public"."stg_dividend_events__dbt_tmp" rename to "stg_dividend_events"
+[0m18:20:07.552123 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m18:20:07.572957 [debug] [Thread-1 (]: On model.dbt_dividend.stg_dividend_events: COMMIT
+[0m18:20:07.573697 [debug] [Thread-1 (]: Using postgres connection "model.dbt_dividend.stg_dividend_events"
+[0m18:20:07.574195 [debug] [Thread-1 (]: On model.dbt_dividend.stg_dividend_events: COMMIT
+[0m18:20:07.576173 [debug] [Thread-1 (]: SQL status: COMMIT in 0.001 seconds
+[0m18:20:07.584302 [debug] [Thread-1 (]: Applying DROP to: "postgres"."public"."stg_dividend_events__dbt_backup"
+[0m18:20:07.592374 [debug] [Thread-1 (]: Using postgres connection "model.dbt_dividend.stg_dividend_events"
+[0m18:20:07.593076 [debug] [Thread-1 (]: On model.dbt_dividend.stg_dividend_events: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "dbt_dividend", "target_name": "dev", "node_id": "model.dbt_dividend.stg_dividend_events"} */
+drop view if exists "postgres"."public"."stg_dividend_events__dbt_backup" cascade
+[0m18:20:07.594108 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.000 seconds
+[0m18:20:07.597237 [debug] [Thread-1 (]: On model.dbt_dividend.stg_dividend_events: Close
+[0m18:20:07.599629 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '65672fa5-5764-4b31-a8db-4144b0a20bfc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77f8746fc910>]}
+[0m18:20:07.600601 [info ] [Thread-1 (]: 1 of 4 OK created sql view model public.stg_dividend_events .................... [[32mCREATE VIEW[0m in 0.13s]
+[0m18:20:07.601481 [debug] [Thread-1 (]: Finished running node model.dbt_dividend.stg_dividend_events
+[0m18:20:07.602863 [debug] [Thread-1 (]: Began running node model.dbt_dividend.fct_dividend_performance
+[0m18:20:07.603585 [info ] [Thread-1 (]: 2 of 4 START sql table model public.fct_dividend_performance ................... [RUN]
+[0m18:20:07.604281 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_dividend.stg_dividend_events, now model.dbt_dividend.fct_dividend_performance)
+[0m18:20:07.604918 [debug] [Thread-1 (]: Began compiling node model.dbt_dividend.fct_dividend_performance
+[0m18:20:07.608163 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_dividend.fct_dividend_performance"
+[0m18:20:07.609175 [debug] [Thread-1 (]: Began executing node model.dbt_dividend.fct_dividend_performance
+[0m18:20:07.635478 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_dividend.fct_dividend_performance"
+[0m18:20:07.636632 [debug] [Thread-1 (]: Using postgres connection "model.dbt_dividend.fct_dividend_performance"
+[0m18:20:07.637298 [debug] [Thread-1 (]: On model.dbt_dividend.fct_dividend_performance: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "dbt_dividend", "target_name": "dev", "node_id": "model.dbt_dividend.fct_dividend_performance"} */
+
+  
+    
+
+  create  table "postgres"."public"."fct_dividend_performance__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+with base as (
+    select
+        ticker,
+        count(*)                                                    as total_events,
+        sum(case when drop_less_than_div then 1 else 0 end)         as favorable_events,
+        avg(dividend_amount)                                        as avg_dividend,
+        avg(price_drop)                                             as avg_price_drop,
+        min(ex_date)                                                as first_event_date,
+        max(ex_date)                                                as last_event_date
+    from "postgres"."public"."stg_dividend_events"
+    group by ticker
+)
+
+select
+    ticker,
+    total_events,
+    favorable_events,
+    round(
+        favorable_events::numeric / nullif(total_events, 0) * 100,
+        2
+    )                                                               as favorable_pct,
+    round(avg_dividend::numeric, 4)                                 as avg_dividend,
+    round(avg_price_drop::numeric, 4)                               as avg_price_drop,
+    first_event_date,
+    last_event_date
+from base
+  );
+  
+[0m18:20:07.637848 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:20:07.658406 [debug] [Thread-1 (]: SQL status: SELECT 25 in 0.020 seconds
+[0m18:20:07.667516 [debug] [Thread-1 (]: Using postgres connection "model.dbt_dividend.fct_dividend_performance"
+[0m18:20:07.668102 [debug] [Thread-1 (]: On model.dbt_dividend.fct_dividend_performance: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "dbt_dividend", "target_name": "dev", "node_id": "model.dbt_dividend.fct_dividend_performance"} */
+alter table "postgres"."public"."fct_dividend_performance__dbt_tmp" rename to "fct_dividend_performance"
+[0m18:20:07.669360 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m18:20:07.671567 [debug] [Thread-1 (]: On model.dbt_dividend.fct_dividend_performance: COMMIT
+[0m18:20:07.672099 [debug] [Thread-1 (]: Using postgres connection "model.dbt_dividend.fct_dividend_performance"
+[0m18:20:07.672641 [debug] [Thread-1 (]: On model.dbt_dividend.fct_dividend_performance: COMMIT
+[0m18:20:07.673912 [debug] [Thread-1 (]: SQL status: COMMIT in 0.001 seconds
+[0m18:20:07.676711 [debug] [Thread-1 (]: Applying DROP to: "postgres"."public"."fct_dividend_performance__dbt_backup"
+[0m18:20:07.680891 [debug] [Thread-1 (]: Using postgres connection "model.dbt_dividend.fct_dividend_performance"
+[0m18:20:07.681504 [debug] [Thread-1 (]: On model.dbt_dividend.fct_dividend_performance: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "dbt_dividend", "target_name": "dev", "node_id": "model.dbt_dividend.fct_dividend_performance"} */
+drop table if exists "postgres"."public"."fct_dividend_performance__dbt_backup" cascade
+[0m18:20:07.682605 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.001 seconds
+[0m18:20:07.684472 [debug] [Thread-1 (]: On model.dbt_dividend.fct_dividend_performance: Close
+[0m18:20:07.685962 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '65672fa5-5764-4b31-a8db-4144b0a20bfc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77f86e4da2d0>]}
+[0m18:20:07.687580 [info ] [Thread-1 (]: 2 of 4 OK created sql table model public.fct_dividend_performance .............. [[32mSELECT 25[0m in 0.08s]
+[0m18:20:07.689314 [debug] [Thread-1 (]: Finished running node model.dbt_dividend.fct_dividend_performance
+[0m18:20:07.690931 [debug] [Thread-1 (]: Began running node model.dbt_dividend.best_dividend_tickers
+[0m18:20:07.692471 [info ] [Thread-1 (]: 3 of 4 START sql table model public.best_dividend_tickers ...................... [RUN]
+[0m18:20:07.693913 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_dividend.fct_dividend_performance, now model.dbt_dividend.best_dividend_tickers)
+[0m18:20:07.695310 [debug] [Thread-1 (]: Began compiling node model.dbt_dividend.best_dividend_tickers
+[0m18:20:07.701156 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_dividend.best_dividend_tickers"
+[0m18:20:07.702399 [debug] [Thread-1 (]: Began executing node model.dbt_dividend.best_dividend_tickers
+[0m18:20:07.707433 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_dividend.best_dividend_tickers"
+[0m18:20:07.708338 [debug] [Thread-1 (]: Using postgres connection "model.dbt_dividend.best_dividend_tickers"
+[0m18:20:07.708911 [debug] [Thread-1 (]: On model.dbt_dividend.best_dividend_tickers: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "dbt_dividend", "target_name": "dev", "node_id": "model.dbt_dividend.best_dividend_tickers"} */
+
+  
+    
+
+  create  table "postgres"."public"."best_dividend_tickers__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+/*
+  The 2 best tickers are those with:
+    1. The highest % of dividend events where price_drop < dividend_amount
+    2. At least 3 qualifying events to ensure statistical relevance
+*/
+select
+    ticker,
+    total_events,
+    favorable_events,
+    favorable_pct,
+    avg_dividend,
+    avg_price_drop,
+    first_event_date,
+    last_event_date
+from "postgres"."public"."fct_dividend_performance"
+where total_events >= 3
+order by favorable_pct desc, avg_dividend desc
+limit 2
+  );
+  
+[0m18:20:07.709621 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:20:07.728486 [debug] [Thread-1 (]: SQL status: SELECT 2 in 0.019 seconds
+[0m18:20:07.735693 [debug] [Thread-1 (]: Using postgres connection "model.dbt_dividend.best_dividend_tickers"
+[0m18:20:07.737122 [debug] [Thread-1 (]: On model.dbt_dividend.best_dividend_tickers: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "dbt_dividend", "target_name": "dev", "node_id": "model.dbt_dividend.best_dividend_tickers"} */
+alter table "postgres"."public"."best_dividend_tickers__dbt_tmp" rename to "best_dividend_tickers"
+[0m18:20:07.738263 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m18:20:07.740557 [debug] [Thread-1 (]: On model.dbt_dividend.best_dividend_tickers: COMMIT
+[0m18:20:07.741123 [debug] [Thread-1 (]: Using postgres connection "model.dbt_dividend.best_dividend_tickers"
+[0m18:20:07.741618 [debug] [Thread-1 (]: On model.dbt_dividend.best_dividend_tickers: COMMIT
+[0m18:20:07.743240 [debug] [Thread-1 (]: SQL status: COMMIT in 0.001 seconds
+[0m18:20:07.745607 [debug] [Thread-1 (]: Applying DROP to: "postgres"."public"."best_dividend_tickers__dbt_backup"
+[0m18:20:07.747415 [debug] [Thread-1 (]: Using postgres connection "model.dbt_dividend.best_dividend_tickers"
+[0m18:20:07.747954 [debug] [Thread-1 (]: On model.dbt_dividend.best_dividend_tickers: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "dbt_dividend", "target_name": "dev", "node_id": "model.dbt_dividend.best_dividend_tickers"} */
+drop table if exists "postgres"."public"."best_dividend_tickers__dbt_backup" cascade
+[0m18:20:07.748895 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.000 seconds
+[0m18:20:07.750619 [debug] [Thread-1 (]: On model.dbt_dividend.best_dividend_tickers: Close
+[0m18:20:07.751515 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '65672fa5-5764-4b31-a8db-4144b0a20bfc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77f8709a9860>]}
+[0m18:20:07.752358 [info ] [Thread-1 (]: 3 of 4 OK created sql table model public.best_dividend_tickers ................. [[32mSELECT 2[0m in 0.06s]
+[0m18:20:07.753054 [debug] [Thread-1 (]: Finished running node model.dbt_dividend.best_dividend_tickers
+[0m18:20:07.754093 [debug] [Thread-1 (]: Began running node model.dbt_dividend.dividend_history
+[0m18:20:07.754779 [info ] [Thread-1 (]: 4 of 4 START sql table model public.dividend_history ........................... [RUN]
+[0m18:20:07.755651 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_dividend.best_dividend_tickers, now model.dbt_dividend.dividend_history)
+[0m18:20:07.756252 [debug] [Thread-1 (]: Began compiling node model.dbt_dividend.dividend_history
+[0m18:20:07.761209 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_dividend.dividend_history"
+[0m18:20:07.762930 [debug] [Thread-1 (]: Began executing node model.dbt_dividend.dividend_history
+[0m18:20:07.771322 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_dividend.dividend_history"
+[0m18:20:07.773277 [debug] [Thread-1 (]: Using postgres connection "model.dbt_dividend.dividend_history"
+[0m18:20:07.773924 [debug] [Thread-1 (]: On model.dbt_dividend.dividend_history: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "dbt_dividend", "target_name": "dev", "node_id": "model.dbt_dividend.dividend_history"} */
+
+  
+    
+
+  create  table "postgres"."public"."dividend_history__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+/*
+  Full dividend event history (last 5 years) for the 2 best tickers only.
+*/
+select
+    e.ticker,
+    e.ex_date,
+    e.dividend_amount,
+    e.price_day_before,
+    e.price_on_ex_date,
+    e.price_drop,
+    e.drop_less_than_div,
+    p.favorable_pct,
+    p.avg_dividend
+from "postgres"."public"."stg_dividend_events" e
+inner join "postgres"."public"."best_dividend_tickers" b
+    on e.ticker = b.ticker
+inner join "postgres"."public"."fct_dividend_performance" p
+    on e.ticker = p.ticker
+where e.ex_date >= current_date - interval '5 years'
+order by e.ticker, e.ex_date
+  );
+  
+[0m18:20:07.775027 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:20:07.798123 [debug] [Thread-1 (]: SQL status: SELECT 40 in 0.023 seconds
+[0m18:20:07.803059 [debug] [Thread-1 (]: Using postgres connection "model.dbt_dividend.dividend_history"
+[0m18:20:07.803843 [debug] [Thread-1 (]: On model.dbt_dividend.dividend_history: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "dbt_dividend", "target_name": "dev", "node_id": "model.dbt_dividend.dividend_history"} */
+alter table "postgres"."public"."dividend_history__dbt_tmp" rename to "dividend_history"
+[0m18:20:07.805424 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m18:20:07.807600 [debug] [Thread-1 (]: On model.dbt_dividend.dividend_history: COMMIT
+[0m18:20:07.808174 [debug] [Thread-1 (]: Using postgres connection "model.dbt_dividend.dividend_history"
+[0m18:20:07.808686 [debug] [Thread-1 (]: On model.dbt_dividend.dividend_history: COMMIT
+[0m18:20:07.810355 [debug] [Thread-1 (]: SQL status: COMMIT in 0.001 seconds
+[0m18:20:07.813596 [debug] [Thread-1 (]: Applying DROP to: "postgres"."public"."dividend_history__dbt_backup"
+[0m18:20:07.815025 [debug] [Thread-1 (]: Using postgres connection "model.dbt_dividend.dividend_history"
+[0m18:20:07.815639 [debug] [Thread-1 (]: On model.dbt_dividend.dividend_history: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "dbt_dividend", "target_name": "dev", "node_id": "model.dbt_dividend.dividend_history"} */
+drop table if exists "postgres"."public"."dividend_history__dbt_backup" cascade
+[0m18:20:07.816590 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.000 seconds
+[0m18:20:07.818264 [debug] [Thread-1 (]: On model.dbt_dividend.dividend_history: Close
+[0m18:20:07.819250 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '65672fa5-5764-4b31-a8db-4144b0a20bfc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77f86e3b58b0>]}
+[0m18:20:07.820081 [info ] [Thread-1 (]: 4 of 4 OK created sql table model public.dividend_history ...................... [[32mSELECT 40[0m in 0.06s]
+[0m18:20:07.820802 [debug] [Thread-1 (]: Finished running node model.dbt_dividend.dividend_history
+[0m18:20:07.822817 [debug] [MainThread]: On master: COMMIT
+[0m18:20:07.823417 [debug] [MainThread]: Using postgres connection "master"
+[0m18:20:07.823911 [debug] [MainThread]: On master: COMMIT
+[0m18:20:07.824352 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m18:20:07.853580 [debug] [MainThread]: SQL status: COMMIT in 0.029 seconds
+[0m18:20:07.854449 [debug] [MainThread]: On master: Close
+[0m18:20:07.855320 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m18:20:07.855790 [debug] [MainThread]: Connection 'model.dbt_dividend.dividend_history' was properly closed.
+[0m18:20:07.856325 [info ] [MainThread]: 
+[0m18:20:07.856799 [info ] [MainThread]: Finished running 3 table models, 1 view model in 0 hours 0 minutes and 0.57 seconds (0.57s).
+[0m18:20:07.859111 [debug] [MainThread]: Command end result
+[0m18:20:07.930900 [debug] [MainThread]: Wrote artifact WritableManifest to /home/pranays/Documents/Learning/Data-Engineering-Assignments/Day6/dbt_dividend/target/manifest.json
+[0m18:20:07.934363 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/pranays/Documents/Learning/Data-Engineering-Assignments/Day6/dbt_dividend/target/semantic_manifest.json
+[0m18:20:07.937940 [debug] [MainThread]: Wrote artifact OsiDocument to /home/pranays/Documents/Learning/Data-Engineering-Assignments/Day6/dbt_dividend/target/osi_document.json
+[0m18:20:07.948128 [debug] [MainThread]: Wrote artifact RunExecutionResult to /home/pranays/Documents/Learning/Data-Engineering-Assignments/Day6/dbt_dividend/target/run_results.json
+[0m18:20:07.948719 [info ] [MainThread]: 
+[0m18:20:07.949235 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m18:20:07.949682 [info ] [MainThread]: 
+[0m18:20:07.950133 [info ] [MainThread]: Done. PASS=4 WARN=0 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=4
+[0m18:20:07.950875 [warn ] [MainThread]: [[33mWARNING[0m][DeprecationsSummary]: Deprecated functionality
+Summary of encountered deprecations:
+- MissingArgumentsPropertyInGenericTestDeprecation: 8 occurrences
+To see all deprecation instances instead of just the first occurrence of each,
+run command again with the `--show-all-deprecations` flag. You may also need to
+run with `--no-partial-parse` as some deprecations are only encountered during
+parsing.
+[0m18:20:07.952157 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 3.9302943, "process_in_blocks": "0", "process_kernel_time": 0.300356, "process_mem_max_rss": "149388", "process_out_blocks": "5984", "process_user_time": 5.520164}
+[0m18:20:07.952824 [debug] [MainThread]: Command `dbt run` succeeded at 18:20:07.952690 after 3.93 seconds
+[0m18:20:07.953324 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77f871565af0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77f875237c50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77f86e4aaff0>]}
+[0m18:20:07.953859 [debug] [MainThread]: Flushing usage events
+[0m18:20:37.985934 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m18:20:44.945309 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79c9c509f380>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79c9c3b77ed0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79c9c3b77890>]}
+
+
+============================== 18:20:44.951265 | acf87472-b48a-490f-8922-87901e83546c ==============================
+[0m18:20:44.951265 [info ] [MainThread]: Running with dbt=1.12.0
+[0m18:20:44.952010 [debug] [MainThread]: running dbt with arguments {'hints_enabled': 'True', 'target_path': 'None', 'log_cache_events': 'False', 'cache_selected_only': 'False', 'version_check': 'True', 'empty': 'None', 'partial_parse': 'True', 'static_parser': 'True', 'invocation_command': 'dbt test', 'debug': 'False', 'use_experimental_parser': 'False', 'printer_width': '80', 'fail_fast': 'False', 'use_colors': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'log_path': '/home/pranays/Documents/Learning/Data-Engineering-Assignments/Day6/dbt_dividend/logs', 'warn_error': 'None', 'no_print': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True', 'write_json': 'True', 'indirect_selection': 'eager', 'quiet': 'False', 'log_format': 'default', 'maximum_seed_size_mib': '1', 'profiles_dir': '/home/pranays/.dbt'}
+[0m18:20:45.214788 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'acf87472-b48a-490f-8922-87901e83546c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79c9c4e1afd0>]}
+[0m18:20:45.309418 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'acf87472-b48a-490f-8922-87901e83546c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79c9c3bdb790>]}
+[0m18:20:45.310725 [info ] [MainThread]: Registered adapter: postgres=1.11.0
+[0m18:20:45.418668 [debug] [MainThread]: checksum: 0ac4f707b0185b5e4d53a2a15915f56053932fe74d2684ef0085d7d509366ebb, vars: {}, profile: dbt_dividend, target: dev, version: 1.12.0
+[0m18:20:45.685381 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m18:20:45.686027 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m18:20:45.686435 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m18:20:45.699292 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'acf87472-b48a-490f-8922-87901e83546c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79c9c1d7a050>]}
+[0m18:20:45.939630 [debug] [MainThread]: Wrote artifact WritableManifest to /home/pranays/Documents/Learning/Data-Engineering-Assignments/Day6/dbt_dividend/target/manifest.json
+[0m18:20:45.942778 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/pranays/Documents/Learning/Data-Engineering-Assignments/Day6/dbt_dividend/target/semantic_manifest.json
+[0m18:20:45.959771 [debug] [MainThread]: Wrote artifact OsiDocument to /home/pranays/Documents/Learning/Data-Engineering-Assignments/Day6/dbt_dividend/target/osi_document.json
+[0m18:20:45.983970 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'acf87472-b48a-490f-8922-87901e83546c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79c9c153df40>]}
+[0m18:20:45.984698 [info ] [MainThread]: Found 4 models, 28 data tests, 2 sources, 744 macros
+[0m18:20:45.985176 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'acf87472-b48a-490f-8922-87901e83546c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79c9c15366d0>]}
+[0m18:20:45.989145 [info ] [MainThread]: 
+[0m18:20:45.989980 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m18:20:45.990532 [info ] [MainThread]: 
+[0m18:20:45.991466 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m18:20:45.997262 [debug] [ThreadPool]: Acquiring new postgres connection 'list_postgres_public'
+[0m18:20:46.049120 [debug] [ThreadPool]: Using postgres connection "list_postgres_public"
+[0m18:20:46.049800 [debug] [ThreadPool]: On list_postgres_public: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "dbt_dividend", "target_name": "dev", "connection_name": "list_postgres_public"} */
+select
+      'postgres' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      'postgres' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+    union all
+    select
+      'postgres' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public'
+    union all
+    select distinct
+     'postgres' as database,
+     proname as name,
+     ns.nspname as schema,
+     'function' as type
+    from pg_proc
+     join pg_namespace as ns on pronamespace = ns.oid
+    where ns.nspname ilike 'public'
+  
+[0m18:20:46.050360 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:20:46.071230 [debug] [ThreadPool]: SQL status: SELECT 12 in 0.021 seconds
+[0m18:20:46.073304 [debug] [ThreadPool]: On list_postgres_public: ROLLBACK
+[0m18:20:46.074049 [debug] [ThreadPool]: On list_postgres_public: Close
+[0m18:20:46.080842 [debug] [MainThread]: Using postgres connection "master"
+[0m18:20:46.081509 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "dbt_dividend", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m18:20:46.082037 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m18:20:46.104440 [debug] [MainThread]: SQL status: SELECT 3 in 0.022 seconds
+[0m18:20:46.108012 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'acf87472-b48a-490f-8922-87901e83546c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79c9c050e680>]}
+[0m18:20:46.108833 [debug] [MainThread]: On master: ROLLBACK
+[0m18:20:46.109731 [debug] [MainThread]: On master: COMMIT
+[0m18:20:46.110346 [debug] [MainThread]: Using postgres connection "master"
+[0m18:20:46.110800 [debug] [MainThread]: On master: COMMIT
+[0m18:20:46.111714 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m18:20:46.112235 [debug] [MainThread]: On master: Close
+[0m18:20:46.116148 [debug] [Thread-1 (]: Began running node test.dbt_dividend.dbt_expectations_expect_column_values_to_be_between_best_dividend_tickers_favorable_pct__100__0.b4af76eef7
+[0m18:20:46.117288 [info ] [Thread-1 (]: 1 of 28 START test dbt_expectations_expect_column_values_to_be_between_best_dividend_tickers_favorable_pct__100__0  [RUN]
+[0m18:20:46.118302 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_postgres_public, now test.dbt_dividend.dbt_expectations_expect_column_values_to_be_between_best_dividend_tickers_favorable_pct__100__0.b4af76eef7)
+[0m18:20:46.118835 [debug] [Thread-1 (]: Began compiling node test.dbt_dividend.dbt_expectations_expect_column_values_to_be_between_best_dividend_tickers_favorable_pct__100__0.b4af76eef7
+[0m18:20:46.157133 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_dividend.dbt_expectations_expect_column_values_to_be_between_best_dividend_tickers_favorable_pct__100__0.b4af76eef7"
+[0m18:20:46.158225 [debug] [Thread-1 (]: Began executing node test.dbt_dividend.dbt_expectations_expect_column_values_to_be_between_best_dividend_tickers_favorable_pct__100__0.b4af76eef7
+[0m18:20:46.182415 [debug] [Thread-1 (]: Writing runtime sql for node "test.dbt_dividend.dbt_expectations_expect_column_values_to_be_between_best_dividend_tickers_favorable_pct__100__0.b4af76eef7"
+[0m18:20:46.183496 [debug] [Thread-1 (]: Using postgres connection "test.dbt_dividend.dbt_expectations_expect_column_values_to_be_between_best_dividend_tickers_favorable_pct__100__0.b4af76eef7"
+[0m18:20:46.184113 [debug] [Thread-1 (]: On test.dbt_dividend.dbt_expectations_expect_column_values_to_be_between_best_dividend_tickers_favorable_pct__100__0.b4af76eef7: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "dbt_dividend", "target_name": "dev", "node_id": "test.dbt_dividend.dbt_expectations_expect_column_values_to_be_between_best_dividend_tickers_favorable_pct__100__0.b4af76eef7"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+
+
+
+
+
+
+    with grouped_expression as (
+    select
+        
+        
+    
+  
+( 1=1 and favorable_pct >= 0 and favorable_pct <= 100
+)
+ as expression
+
+
+    from "postgres"."public"."best_dividend_tickers"
+    
+
+),
+validation_errors as (
+
+    select
+        *
+    from
+        grouped_expression
+    where
+        not(expression = true)
+
+)
+
+select *
+from validation_errors
+
+
+
+
+
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m18:20:46.184629 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:20:46.206342 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.022 seconds
+[0m18:20:46.213956 [debug] [Thread-1 (]: On test.dbt_dividend.dbt_expectations_expect_column_values_to_be_between_best_dividend_tickers_favorable_pct__100__0.b4af76eef7: ROLLBACK
+[0m18:20:46.215435 [debug] [Thread-1 (]: On test.dbt_dividend.dbt_expectations_expect_column_values_to_be_between_best_dividend_tickers_favorable_pct__100__0.b4af76eef7: Close
+[0m18:20:46.217036 [info ] [Thread-1 (]: 1 of 28 PASS dbt_expectations_expect_column_values_to_be_between_best_dividend_tickers_favorable_pct__100__0  [[32mPASS[0m in 0.10s]
+[0m18:20:46.218307 [debug] [Thread-1 (]: Finished running node test.dbt_dividend.dbt_expectations_expect_column_values_to_be_between_best_dividend_tickers_favorable_pct__100__0.b4af76eef7
+[0m18:20:46.219115 [debug] [Thread-1 (]: Began running node test.dbt_dividend.dbt_expectations_expect_column_values_to_be_between_dividend_history_dividend_amount__0__True.009c4f78c0
+[0m18:20:46.219856 [info ] [Thread-1 (]: 2 of 28 START test dbt_expectations_expect_column_values_to_be_between_dividend_history_dividend_amount__0__True  [RUN]
+[0m18:20:46.220735 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dbt_dividend.dbt_expectations_expect_column_values_to_be_between_best_dividend_tickers_favorable_pct__100__0.b4af76eef7, now test.dbt_dividend.dbt_expectations_expect_column_values_to_be_between_dividend_history_dividend_amount__0__True.009c4f78c0)
+[0m18:20:46.221384 [debug] [Thread-1 (]: Began compiling node test.dbt_dividend.dbt_expectations_expect_column_values_to_be_between_dividend_history_dividend_amount__0__True.009c4f78c0
+[0m18:20:46.233815 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_dividend.dbt_expectations_expect_column_values_to_be_between_dividend_history_dividend_amount__0__True.009c4f78c0"
+[0m18:20:46.235029 [debug] [Thread-1 (]: Began executing node test.dbt_dividend.dbt_expectations_expect_column_values_to_be_between_dividend_history_dividend_amount__0__True.009c4f78c0
+[0m18:20:46.239959 [debug] [Thread-1 (]: Writing runtime sql for node "test.dbt_dividend.dbt_expectations_expect_column_values_to_be_between_dividend_history_dividend_amount__0__True.009c4f78c0"
+[0m18:20:46.242743 [debug] [Thread-1 (]: Using postgres connection "test.dbt_dividend.dbt_expectations_expect_column_values_to_be_between_dividend_history_dividend_amount__0__True.009c4f78c0"
+[0m18:20:46.244844 [debug] [Thread-1 (]: On test.dbt_dividend.dbt_expectations_expect_column_values_to_be_between_dividend_history_dividend_amount__0__True.009c4f78c0: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "dbt_dividend", "target_name": "dev", "node_id": "test.dbt_dividend.dbt_expectations_expect_column_values_to_be_between_dividend_history_dividend_amount__0__True.009c4f78c0"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+
+
+
+
+
+
+    with grouped_expression as (
+    select
+        
+        
+    
+  
+( 1=1 and dividend_amount > 0
+)
+ as expression
+
+
+    from "postgres"."public"."dividend_history"
+    
+
+),
+validation_errors as (
+
+    select
+        *
+    from
+        grouped_expression
+    where
+        not(expression = true)
+
+)
+
+select *
+from validation_errors
+
+
+
+
+
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m18:20:46.246985 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:20:46.278629 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.031 seconds
+[0m18:20:46.281932 [debug] [Thread-1 (]: On test.dbt_dividend.dbt_expectations_expect_column_values_to_be_between_dividend_history_dividend_amount__0__True.009c4f78c0: ROLLBACK
+[0m18:20:46.283577 [debug] [Thread-1 (]: On test.dbt_dividend.dbt_expectations_expect_column_values_to_be_between_dividend_history_dividend_amount__0__True.009c4f78c0: Close
+[0m18:20:46.285643 [info ] [Thread-1 (]: 2 of 28 PASS dbt_expectations_expect_column_values_to_be_between_dividend_history_dividend_amount__0__True  [[32mPASS[0m in 0.06s]
+[0m18:20:46.287616 [debug] [Thread-1 (]: Finished running node test.dbt_dividend.dbt_expectations_expect_column_values_to_be_between_dividend_history_dividend_amount__0__True.009c4f78c0
+[0m18:20:46.288306 [debug] [Thread-1 (]: Began running node test.dbt_dividend.dbt_expectations_expect_column_values_to_be_between_fct_dividend_performance_avg_dividend__0__True.d0550a099b
+[0m18:20:46.288856 [info ] [Thread-1 (]: 3 of 28 START test dbt_expectations_expect_column_values_to_be_between_fct_dividend_performance_avg_dividend__0__True  [RUN]
+[0m18:20:46.289588 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dbt_dividend.dbt_expectations_expect_column_values_to_be_between_dividend_history_dividend_amount__0__True.009c4f78c0, now test.dbt_dividend.dbt_expectations_expect_column_values_to_be_between_fct_dividend_performance_avg_dividend__0__True.d0550a099b)
+[0m18:20:46.290403 [debug] [Thread-1 (]: Began compiling node test.dbt_dividend.dbt_expectations_expect_column_values_to_be_between_fct_dividend_performance_avg_dividend__0__True.d0550a099b
+[0m18:20:46.301856 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_dividend.dbt_expectations_expect_column_values_to_be_between_fct_dividend_performance_avg_dividend__0__True.d0550a099b"
+[0m18:20:46.302995 [debug] [Thread-1 (]: Began executing node test.dbt_dividend.dbt_expectations_expect_column_values_to_be_between_fct_dividend_performance_avg_dividend__0__True.d0550a099b
+[0m18:20:46.305885 [debug] [Thread-1 (]: Writing runtime sql for node "test.dbt_dividend.dbt_expectations_expect_column_values_to_be_between_fct_dividend_performance_avg_dividend__0__True.d0550a099b"
+[0m18:20:46.307094 [debug] [Thread-1 (]: Using postgres connection "test.dbt_dividend.dbt_expectations_expect_column_values_to_be_between_fct_dividend_performance_avg_dividend__0__True.d0550a099b"
+[0m18:20:46.307861 [debug] [Thread-1 (]: On test.dbt_dividend.dbt_expectations_expect_column_values_to_be_between_fct_dividend_performance_avg_dividend__0__True.d0550a099b: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "dbt_dividend", "target_name": "dev", "node_id": "test.dbt_dividend.dbt_expectations_expect_column_values_to_be_between_fct_dividend_performance_avg_dividend__0__True.d0550a099b"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+
+
+
+
+
+
+    with grouped_expression as (
+    select
+        
+        
+    
+  
+( 1=1 and avg_dividend > 0
+)
+ as expression
+
+
+    from "postgres"."public"."fct_dividend_performance"
+    
+
+),
+validation_errors as (
+
+    select
+        *
+    from
+        grouped_expression
+    where
+        not(expression = true)
+
+)
+
+select *
+from validation_errors
+
+
+
+
+
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m18:20:46.308472 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:20:46.332943 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.024 seconds
+[0m18:20:46.336153 [debug] [Thread-1 (]: On test.dbt_dividend.dbt_expectations_expect_column_values_to_be_between_fct_dividend_performance_avg_dividend__0__True.d0550a099b: ROLLBACK
+[0m18:20:46.338177 [debug] [Thread-1 (]: On test.dbt_dividend.dbt_expectations_expect_column_values_to_be_between_fct_dividend_performance_avg_dividend__0__True.d0550a099b: Close
+[0m18:20:46.340736 [info ] [Thread-1 (]: 3 of 28 PASS dbt_expectations_expect_column_values_to_be_between_fct_dividend_performance_avg_dividend__0__True  [[32mPASS[0m in 0.05s]
+[0m18:20:46.342154 [debug] [Thread-1 (]: Finished running node test.dbt_dividend.dbt_expectations_expect_column_values_to_be_between_fct_dividend_performance_avg_dividend__0__True.d0550a099b
+[0m18:20:46.343167 [debug] [Thread-1 (]: Began running node test.dbt_dividend.dbt_expectations_expect_column_values_to_be_between_fct_dividend_performance_favorable_pct__100__0.b8cab14cef
+[0m18:20:46.344072 [info ] [Thread-1 (]: 4 of 28 START test dbt_expectations_expect_column_values_to_be_between_fct_dividend_performance_favorable_pct__100__0  [RUN]
+[0m18:20:46.345315 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dbt_dividend.dbt_expectations_expect_column_values_to_be_between_fct_dividend_performance_avg_dividend__0__True.d0550a099b, now test.dbt_dividend.dbt_expectations_expect_column_values_to_be_between_fct_dividend_performance_favorable_pct__100__0.b8cab14cef)
+[0m18:20:46.346618 [debug] [Thread-1 (]: Began compiling node test.dbt_dividend.dbt_expectations_expect_column_values_to_be_between_fct_dividend_performance_favorable_pct__100__0.b8cab14cef
+[0m18:20:46.359408 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_dividend.dbt_expectations_expect_column_values_to_be_between_fct_dividend_performance_favorable_pct__100__0.b8cab14cef"
+[0m18:20:46.360462 [debug] [Thread-1 (]: Began executing node test.dbt_dividend.dbt_expectations_expect_column_values_to_be_between_fct_dividend_performance_favorable_pct__100__0.b8cab14cef
+[0m18:20:46.363421 [debug] [Thread-1 (]: Writing runtime sql for node "test.dbt_dividend.dbt_expectations_expect_column_values_to_be_between_fct_dividend_performance_favorable_pct__100__0.b8cab14cef"
+[0m18:20:46.365922 [debug] [Thread-1 (]: Using postgres connection "test.dbt_dividend.dbt_expectations_expect_column_values_to_be_between_fct_dividend_performance_favorable_pct__100__0.b8cab14cef"
+[0m18:20:46.367055 [debug] [Thread-1 (]: On test.dbt_dividend.dbt_expectations_expect_column_values_to_be_between_fct_dividend_performance_favorable_pct__100__0.b8cab14cef: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "dbt_dividend", "target_name": "dev", "node_id": "test.dbt_dividend.dbt_expectations_expect_column_values_to_be_between_fct_dividend_performance_favorable_pct__100__0.b8cab14cef"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+
+
+
+
+
+
+    with grouped_expression as (
+    select
+        
+        
+    
+  
+( 1=1 and favorable_pct >= 0 and favorable_pct <= 100
+)
+ as expression
+
+
+    from "postgres"."public"."fct_dividend_performance"
+    
+
+),
+validation_errors as (
+
+    select
+        *
+    from
+        grouped_expression
+    where
+        not(expression = true)
+
+)
+
+select *
+from validation_errors
+
+
+
+
+
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m18:20:46.368007 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:20:46.390746 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.022 seconds
+[0m18:20:46.393232 [debug] [Thread-1 (]: On test.dbt_dividend.dbt_expectations_expect_column_values_to_be_between_fct_dividend_performance_favorable_pct__100__0.b8cab14cef: ROLLBACK
+[0m18:20:46.394168 [debug] [Thread-1 (]: On test.dbt_dividend.dbt_expectations_expect_column_values_to_be_between_fct_dividend_performance_favorable_pct__100__0.b8cab14cef: Close
+[0m18:20:46.395357 [info ] [Thread-1 (]: 4 of 28 PASS dbt_expectations_expect_column_values_to_be_between_fct_dividend_performance_favorable_pct__100__0  [[32mPASS[0m in 0.05s]
+[0m18:20:46.396174 [debug] [Thread-1 (]: Finished running node test.dbt_dividend.dbt_expectations_expect_column_values_to_be_between_fct_dividend_performance_favorable_pct__100__0.b8cab14cef
+[0m18:20:46.396741 [debug] [Thread-1 (]: Began running node test.dbt_dividend.dbt_expectations_expect_column_values_to_be_between_fct_dividend_performance_total_events__1.a0010ffdff
+[0m18:20:46.397383 [info ] [Thread-1 (]: 5 of 28 START test dbt_expectations_expect_column_values_to_be_between_fct_dividend_performance_total_events__1  [RUN]
+[0m18:20:46.398140 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dbt_dividend.dbt_expectations_expect_column_values_to_be_between_fct_dividend_performance_favorable_pct__100__0.b8cab14cef, now test.dbt_dividend.dbt_expectations_expect_column_values_to_be_between_fct_dividend_performance_total_events__1.a0010ffdff)
+[0m18:20:46.398923 [debug] [Thread-1 (]: Began compiling node test.dbt_dividend.dbt_expectations_expect_column_values_to_be_between_fct_dividend_performance_total_events__1.a0010ffdff
+[0m18:20:46.411501 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_dividend.dbt_expectations_expect_column_values_to_be_between_fct_dividend_performance_total_events__1.a0010ffdff"
+[0m18:20:46.412568 [debug] [Thread-1 (]: Began executing node test.dbt_dividend.dbt_expectations_expect_column_values_to_be_between_fct_dividend_performance_total_events__1.a0010ffdff
+[0m18:20:46.415221 [debug] [Thread-1 (]: Writing runtime sql for node "test.dbt_dividend.dbt_expectations_expect_column_values_to_be_between_fct_dividend_performance_total_events__1.a0010ffdff"
+[0m18:20:46.416248 [debug] [Thread-1 (]: Using postgres connection "test.dbt_dividend.dbt_expectations_expect_column_values_to_be_between_fct_dividend_performance_total_events__1.a0010ffdff"
+[0m18:20:46.417018 [debug] [Thread-1 (]: On test.dbt_dividend.dbt_expectations_expect_column_values_to_be_between_fct_dividend_performance_total_events__1.a0010ffdff: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "dbt_dividend", "target_name": "dev", "node_id": "test.dbt_dividend.dbt_expectations_expect_column_values_to_be_between_fct_dividend_performance_total_events__1.a0010ffdff"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+
+
+
+
+
+
+    with grouped_expression as (
+    select
+        
+        
+    
+  
+( 1=1 and total_events >= 1
+)
+ as expression
+
+
+    from "postgres"."public"."fct_dividend_performance"
+    
+
+),
+validation_errors as (
+
+    select
+        *
+    from
+        grouped_expression
+    where
+        not(expression = true)
+
+)
+
+select *
+from validation_errors
+
+
+
+
+
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m18:20:46.420042 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:20:46.443712 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.024 seconds
+[0m18:20:46.445921 [debug] [Thread-1 (]: On test.dbt_dividend.dbt_expectations_expect_column_values_to_be_between_fct_dividend_performance_total_events__1.a0010ffdff: ROLLBACK
+[0m18:20:46.446872 [debug] [Thread-1 (]: On test.dbt_dividend.dbt_expectations_expect_column_values_to_be_between_fct_dividend_performance_total_events__1.a0010ffdff: Close
+[0m18:20:46.447954 [info ] [Thread-1 (]: 5 of 28 PASS dbt_expectations_expect_column_values_to_be_between_fct_dividend_performance_total_events__1  [[32mPASS[0m in 0.05s]
+[0m18:20:46.448862 [debug] [Thread-1 (]: Finished running node test.dbt_dividend.dbt_expectations_expect_column_values_to_be_between_fct_dividend_performance_total_events__1.a0010ffdff
+[0m18:20:46.449448 [debug] [Thread-1 (]: Began running node test.dbt_dividend.dbt_expectations_expect_column_values_to_be_between_stg_dividend_events_dividend_amount__0__True.ba4196f4d1
+[0m18:20:46.450028 [info ] [Thread-1 (]: 6 of 28 START test dbt_expectations_expect_column_values_to_be_between_stg_dividend_events_dividend_amount__0__True  [RUN]
+[0m18:20:46.450647 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dbt_dividend.dbt_expectations_expect_column_values_to_be_between_fct_dividend_performance_total_events__1.a0010ffdff, now test.dbt_dividend.dbt_expectations_expect_column_values_to_be_between_stg_dividend_events_dividend_amount__0__True.ba4196f4d1)
+[0m18:20:46.451174 [debug] [Thread-1 (]: Began compiling node test.dbt_dividend.dbt_expectations_expect_column_values_to_be_between_stg_dividend_events_dividend_amount__0__True.ba4196f4d1
+[0m18:20:46.462743 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_dividend.dbt_expectations_expect_column_values_to_be_between_stg_dividend_events_dividend_amount__0__True.ba4196f4d1"
+[0m18:20:46.463818 [debug] [Thread-1 (]: Began executing node test.dbt_dividend.dbt_expectations_expect_column_values_to_be_between_stg_dividend_events_dividend_amount__0__True.ba4196f4d1
+[0m18:20:46.466542 [debug] [Thread-1 (]: Writing runtime sql for node "test.dbt_dividend.dbt_expectations_expect_column_values_to_be_between_stg_dividend_events_dividend_amount__0__True.ba4196f4d1"
+[0m18:20:46.468498 [debug] [Thread-1 (]: Using postgres connection "test.dbt_dividend.dbt_expectations_expect_column_values_to_be_between_stg_dividend_events_dividend_amount__0__True.ba4196f4d1"
+[0m18:20:46.469585 [debug] [Thread-1 (]: On test.dbt_dividend.dbt_expectations_expect_column_values_to_be_between_stg_dividend_events_dividend_amount__0__True.ba4196f4d1: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "dbt_dividend", "target_name": "dev", "node_id": "test.dbt_dividend.dbt_expectations_expect_column_values_to_be_between_stg_dividend_events_dividend_amount__0__True.ba4196f4d1"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+
+
+
+
+
+
+    with grouped_expression as (
+    select
+        
+        
+    
+  
+( 1=1 and dividend_amount > 0
+)
+ as expression
+
+
+    from "postgres"."public"."stg_dividend_events"
+    
+
+),
+validation_errors as (
+
+    select
+        *
+    from
+        grouped_expression
+    where
+        not(expression = true)
+
+)
+
+select *
+from validation_errors
+
+
+
+
+
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m18:20:46.470562 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:20:46.497425 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.027 seconds
+[0m18:20:46.500738 [debug] [Thread-1 (]: On test.dbt_dividend.dbt_expectations_expect_column_values_to_be_between_stg_dividend_events_dividend_amount__0__True.ba4196f4d1: ROLLBACK
+[0m18:20:46.502392 [debug] [Thread-1 (]: On test.dbt_dividend.dbt_expectations_expect_column_values_to_be_between_stg_dividend_events_dividend_amount__0__True.ba4196f4d1: Close
+[0m18:20:46.504510 [info ] [Thread-1 (]: 6 of 28 PASS dbt_expectations_expect_column_values_to_be_between_stg_dividend_events_dividend_amount__0__True  [[32mPASS[0m in 0.05s]
+[0m18:20:46.506708 [debug] [Thread-1 (]: Finished running node test.dbt_dividend.dbt_expectations_expect_column_values_to_be_between_stg_dividend_events_dividend_amount__0__True.ba4196f4d1
+[0m18:20:46.508003 [debug] [Thread-1 (]: Began running node test.dbt_dividend.dbt_expectations_expect_column_values_to_be_between_stg_dividend_events_price_drop__500___500.fe3301004f
+[0m18:20:46.509586 [info ] [Thread-1 (]: 7 of 28 START test dbt_expectations_expect_column_values_to_be_between_stg_dividend_events_price_drop__500___500  [RUN]
+[0m18:20:46.511126 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dbt_dividend.dbt_expectations_expect_column_values_to_be_between_stg_dividend_events_dividend_amount__0__True.ba4196f4d1, now test.dbt_dividend.dbt_expectations_expect_column_values_to_be_between_stg_dividend_events_price_drop__500___500.fe3301004f)
+[0m18:20:46.513641 [debug] [Thread-1 (]: Began compiling node test.dbt_dividend.dbt_expectations_expect_column_values_to_be_between_stg_dividend_events_price_drop__500___500.fe3301004f
+[0m18:20:46.528402 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_dividend.dbt_expectations_expect_column_values_to_be_between_stg_dividend_events_price_drop__500___500.fe3301004f"
+[0m18:20:46.530226 [debug] [Thread-1 (]: Began executing node test.dbt_dividend.dbt_expectations_expect_column_values_to_be_between_stg_dividend_events_price_drop__500___500.fe3301004f
+[0m18:20:46.535249 [debug] [Thread-1 (]: Writing runtime sql for node "test.dbt_dividend.dbt_expectations_expect_column_values_to_be_between_stg_dividend_events_price_drop__500___500.fe3301004f"
+[0m18:20:46.537498 [debug] [Thread-1 (]: Using postgres connection "test.dbt_dividend.dbt_expectations_expect_column_values_to_be_between_stg_dividend_events_price_drop__500___500.fe3301004f"
+[0m18:20:46.538624 [debug] [Thread-1 (]: On test.dbt_dividend.dbt_expectations_expect_column_values_to_be_between_stg_dividend_events_price_drop__500___500.fe3301004f: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "dbt_dividend", "target_name": "dev", "node_id": "test.dbt_dividend.dbt_expectations_expect_column_values_to_be_between_stg_dividend_events_price_drop__500___500.fe3301004f"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+
+
+
+
+
+
+    with grouped_expression as (
+    select
+        
+        
+    
+  
+( 1=1 and price_drop >= -500 and price_drop <= 500
+)
+ as expression
+
+
+    from "postgres"."public"."stg_dividend_events"
+    
+
+),
+validation_errors as (
+
+    select
+        *
+    from
+        grouped_expression
+    where
+        not(expression = true)
+
+)
+
+select *
+from validation_errors
+
+
+
+
+
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m18:20:46.539611 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:20:46.564544 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.025 seconds
+[0m18:20:46.568098 [debug] [Thread-1 (]: On test.dbt_dividend.dbt_expectations_expect_column_values_to_be_between_stg_dividend_events_price_drop__500___500.fe3301004f: ROLLBACK
+[0m18:20:46.569780 [debug] [Thread-1 (]: On test.dbt_dividend.dbt_expectations_expect_column_values_to_be_between_stg_dividend_events_price_drop__500___500.fe3301004f: Close
+[0m18:20:46.571816 [info ] [Thread-1 (]: 7 of 28 PASS dbt_expectations_expect_column_values_to_be_between_stg_dividend_events_price_drop__500___500  [[32mPASS[0m in 0.06s]
+[0m18:20:46.573423 [debug] [Thread-1 (]: Finished running node test.dbt_dividend.dbt_expectations_expect_column_values_to_be_between_stg_dividend_events_price_drop__500___500.fe3301004f
+[0m18:20:46.574491 [debug] [Thread-1 (]: Began running node test.dbt_dividend.dbt_expectations_source_expect_column_values_to_be_between_dividend_db_dividend_events_dividend_amount__0__True.376d101d52
+[0m18:20:46.575736 [info ] [Thread-1 (]: 8 of 28 START test dbt_expectations_source_expect_column_values_to_be_between_dividend_db_dividend_events_dividend_amount__0__True  [RUN]
+[0m18:20:46.576973 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dbt_dividend.dbt_expectations_expect_column_values_to_be_between_stg_dividend_events_price_drop__500___500.fe3301004f, now test.dbt_dividend.dbt_expectations_source_expect_column_values_to_be_between_dividend_db_dividend_events_dividend_amount__0__True.376d101d52)
+[0m18:20:46.577973 [debug] [Thread-1 (]: Began compiling node test.dbt_dividend.dbt_expectations_source_expect_column_values_to_be_between_dividend_db_dividend_events_dividend_amount__0__True.376d101d52
+[0m18:20:46.601109 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_dividend.dbt_expectations_source_expect_column_values_to_be_between_dividend_db_dividend_events_dividend_amount__0__True.376d101d52"
+[0m18:20:46.602832 [debug] [Thread-1 (]: Began executing node test.dbt_dividend.dbt_expectations_source_expect_column_values_to_be_between_dividend_db_dividend_events_dividend_amount__0__True.376d101d52
+[0m18:20:46.608123 [debug] [Thread-1 (]: Writing runtime sql for node "test.dbt_dividend.dbt_expectations_source_expect_column_values_to_be_between_dividend_db_dividend_events_dividend_amount__0__True.376d101d52"
+[0m18:20:46.609897 [debug] [Thread-1 (]: Using postgres connection "test.dbt_dividend.dbt_expectations_source_expect_column_values_to_be_between_dividend_db_dividend_events_dividend_amount__0__True.376d101d52"
+[0m18:20:46.611086 [debug] [Thread-1 (]: On test.dbt_dividend.dbt_expectations_source_expect_column_values_to_be_between_dividend_db_dividend_events_dividend_amount__0__True.376d101d52: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "dbt_dividend", "target_name": "dev", "node_id": "test.dbt_dividend.dbt_expectations_source_expect_column_values_to_be_between_dividend_db_dividend_events_dividend_amount__0__True.376d101d52"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+
+
+
+
+
+
+    with grouped_expression as (
+    select
+        
+        
+    
+  
+( 1=1 and dividend_amount > 0
+)
+ as expression
+
+
+    from "postgres"."public"."dividend_events"
+    
+
+),
+validation_errors as (
+
+    select
+        *
+    from
+        grouped_expression
+    where
+        not(expression = true)
+
+)
+
+select *
+from validation_errors
+
+
+
+
+
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m18:20:46.612169 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:20:46.635208 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.023 seconds
+[0m18:20:46.637312 [debug] [Thread-1 (]: On test.dbt_dividend.dbt_expectations_source_expect_column_values_to_be_between_dividend_db_dividend_events_dividend_amount__0__True.376d101d52: ROLLBACK
+[0m18:20:46.638171 [debug] [Thread-1 (]: On test.dbt_dividend.dbt_expectations_source_expect_column_values_to_be_between_dividend_db_dividend_events_dividend_amount__0__True.376d101d52: Close
+[0m18:20:46.639368 [info ] [Thread-1 (]: 8 of 28 PASS dbt_expectations_source_expect_column_values_to_be_between_dividend_db_dividend_events_dividend_amount__0__True  [[32mPASS[0m in 0.06s]
+[0m18:20:46.640265 [debug] [Thread-1 (]: Finished running node test.dbt_dividend.dbt_expectations_source_expect_column_values_to_be_between_dividend_db_dividend_events_dividend_amount__0__True.376d101d52
+[0m18:20:46.640814 [debug] [Thread-1 (]: Began running node test.dbt_dividend.not_null_best_dividend_tickers_favorable_pct.986b2eaa7d
+[0m18:20:46.641304 [info ] [Thread-1 (]: 9 of 28 START test not_null_best_dividend_tickers_favorable_pct ................ [RUN]
+[0m18:20:46.642266 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dbt_dividend.dbt_expectations_source_expect_column_values_to_be_between_dividend_db_dividend_events_dividend_amount__0__True.376d101d52, now test.dbt_dividend.not_null_best_dividend_tickers_favorable_pct.986b2eaa7d)
+[0m18:20:46.643287 [debug] [Thread-1 (]: Began compiling node test.dbt_dividend.not_null_best_dividend_tickers_favorable_pct.986b2eaa7d
+[0m18:20:46.654848 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_dividend.not_null_best_dividend_tickers_favorable_pct.986b2eaa7d"
+[0m18:20:46.655768 [debug] [Thread-1 (]: Began executing node test.dbt_dividend.not_null_best_dividend_tickers_favorable_pct.986b2eaa7d
+[0m18:20:46.658720 [debug] [Thread-1 (]: Writing runtime sql for node "test.dbt_dividend.not_null_best_dividend_tickers_favorable_pct.986b2eaa7d"
+[0m18:20:46.659791 [debug] [Thread-1 (]: Using postgres connection "test.dbt_dividend.not_null_best_dividend_tickers_favorable_pct.986b2eaa7d"
+[0m18:20:46.660648 [debug] [Thread-1 (]: On test.dbt_dividend.not_null_best_dividend_tickers_favorable_pct.986b2eaa7d: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "dbt_dividend", "target_name": "dev", "node_id": "test.dbt_dividend.not_null_best_dividend_tickers_favorable_pct.986b2eaa7d"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select favorable_pct
+from "postgres"."public"."best_dividend_tickers"
+where favorable_pct is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m18:20:46.661157 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:20:46.675080 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.014 seconds
+[0m18:20:46.677123 [debug] [Thread-1 (]: On test.dbt_dividend.not_null_best_dividend_tickers_favorable_pct.986b2eaa7d: ROLLBACK
+[0m18:20:46.677902 [debug] [Thread-1 (]: On test.dbt_dividend.not_null_best_dividend_tickers_favorable_pct.986b2eaa7d: Close
+[0m18:20:46.678922 [info ] [Thread-1 (]: 9 of 28 PASS not_null_best_dividend_tickers_favorable_pct ...................... [[32mPASS[0m in 0.04s]
+[0m18:20:46.679759 [debug] [Thread-1 (]: Finished running node test.dbt_dividend.not_null_best_dividend_tickers_favorable_pct.986b2eaa7d
+[0m18:20:46.680300 [debug] [Thread-1 (]: Began running node test.dbt_dividend.not_null_best_dividend_tickers_ticker.040363ba03
+[0m18:20:46.680891 [info ] [Thread-1 (]: 10 of 28 START test not_null_best_dividend_tickers_ticker ...................... [RUN]
+[0m18:20:46.681501 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dbt_dividend.not_null_best_dividend_tickers_favorable_pct.986b2eaa7d, now test.dbt_dividend.not_null_best_dividend_tickers_ticker.040363ba03)
+[0m18:20:46.681974 [debug] [Thread-1 (]: Began compiling node test.dbt_dividend.not_null_best_dividend_tickers_ticker.040363ba03
+[0m18:20:46.690655 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_dividend.not_null_best_dividend_tickers_ticker.040363ba03"
+[0m18:20:46.691612 [debug] [Thread-1 (]: Began executing node test.dbt_dividend.not_null_best_dividend_tickers_ticker.040363ba03
+[0m18:20:46.693894 [debug] [Thread-1 (]: Writing runtime sql for node "test.dbt_dividend.not_null_best_dividend_tickers_ticker.040363ba03"
+[0m18:20:46.694683 [debug] [Thread-1 (]: Using postgres connection "test.dbt_dividend.not_null_best_dividend_tickers_ticker.040363ba03"
+[0m18:20:46.695286 [debug] [Thread-1 (]: On test.dbt_dividend.not_null_best_dividend_tickers_ticker.040363ba03: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "dbt_dividend", "target_name": "dev", "node_id": "test.dbt_dividend.not_null_best_dividend_tickers_ticker.040363ba03"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select ticker
+from "postgres"."public"."best_dividend_tickers"
+where ticker is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m18:20:46.695769 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:20:46.710817 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.015 seconds
+[0m18:20:46.713679 [debug] [Thread-1 (]: On test.dbt_dividend.not_null_best_dividend_tickers_ticker.040363ba03: ROLLBACK
+[0m18:20:46.714870 [debug] [Thread-1 (]: On test.dbt_dividend.not_null_best_dividend_tickers_ticker.040363ba03: Close
+[0m18:20:46.716042 [info ] [Thread-1 (]: 10 of 28 PASS not_null_best_dividend_tickers_ticker ............................ [[32mPASS[0m in 0.03s]
+[0m18:20:46.716866 [debug] [Thread-1 (]: Finished running node test.dbt_dividend.not_null_best_dividend_tickers_ticker.040363ba03
+[0m18:20:46.717407 [debug] [Thread-1 (]: Began running node test.dbt_dividend.not_null_dividend_history_dividend_amount.2013457957
+[0m18:20:46.717933 [info ] [Thread-1 (]: 11 of 28 START test not_null_dividend_history_dividend_amount .................. [RUN]
+[0m18:20:46.718661 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dbt_dividend.not_null_best_dividend_tickers_ticker.040363ba03, now test.dbt_dividend.not_null_dividend_history_dividend_amount.2013457957)
+[0m18:20:46.719157 [debug] [Thread-1 (]: Began compiling node test.dbt_dividend.not_null_dividend_history_dividend_amount.2013457957
+[0m18:20:46.727340 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_dividend.not_null_dividend_history_dividend_amount.2013457957"
+[0m18:20:46.728394 [debug] [Thread-1 (]: Began executing node test.dbt_dividend.not_null_dividend_history_dividend_amount.2013457957
+[0m18:20:46.730863 [debug] [Thread-1 (]: Writing runtime sql for node "test.dbt_dividend.not_null_dividend_history_dividend_amount.2013457957"
+[0m18:20:46.731711 [debug] [Thread-1 (]: Using postgres connection "test.dbt_dividend.not_null_dividend_history_dividend_amount.2013457957"
+[0m18:20:46.732257 [debug] [Thread-1 (]: On test.dbt_dividend.not_null_dividend_history_dividend_amount.2013457957: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "dbt_dividend", "target_name": "dev", "node_id": "test.dbt_dividend.not_null_dividend_history_dividend_amount.2013457957"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select dividend_amount
+from "postgres"."public"."dividend_history"
+where dividend_amount is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m18:20:46.732724 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:20:46.753747 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.021 seconds
+[0m18:20:46.756047 [debug] [Thread-1 (]: On test.dbt_dividend.not_null_dividend_history_dividend_amount.2013457957: ROLLBACK
+[0m18:20:46.757324 [debug] [Thread-1 (]: On test.dbt_dividend.not_null_dividend_history_dividend_amount.2013457957: Close
+[0m18:20:46.758646 [info ] [Thread-1 (]: 11 of 28 PASS not_null_dividend_history_dividend_amount ........................ [[32mPASS[0m in 0.04s]
+[0m18:20:46.759542 [debug] [Thread-1 (]: Finished running node test.dbt_dividend.not_null_dividend_history_dividend_amount.2013457957
+[0m18:20:46.760119 [debug] [Thread-1 (]: Began running node test.dbt_dividend.not_null_dividend_history_ex_date.de91cddc0f
+[0m18:20:46.760661 [info ] [Thread-1 (]: 12 of 28 START test not_null_dividend_history_ex_date .......................... [RUN]
+[0m18:20:46.761351 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dbt_dividend.not_null_dividend_history_dividend_amount.2013457957, now test.dbt_dividend.not_null_dividend_history_ex_date.de91cddc0f)
+[0m18:20:46.761871 [debug] [Thread-1 (]: Began compiling node test.dbt_dividend.not_null_dividend_history_ex_date.de91cddc0f
+[0m18:20:46.769877 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_dividend.not_null_dividend_history_ex_date.de91cddc0f"
+[0m18:20:46.770786 [debug] [Thread-1 (]: Began executing node test.dbt_dividend.not_null_dividend_history_ex_date.de91cddc0f
+[0m18:20:46.773116 [debug] [Thread-1 (]: Writing runtime sql for node "test.dbt_dividend.not_null_dividend_history_ex_date.de91cddc0f"
+[0m18:20:46.773954 [debug] [Thread-1 (]: Using postgres connection "test.dbt_dividend.not_null_dividend_history_ex_date.de91cddc0f"
+[0m18:20:46.774498 [debug] [Thread-1 (]: On test.dbt_dividend.not_null_dividend_history_ex_date.de91cddc0f: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "dbt_dividend", "target_name": "dev", "node_id": "test.dbt_dividend.not_null_dividend_history_ex_date.de91cddc0f"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select ex_date
+from "postgres"."public"."dividend_history"
+where ex_date is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m18:20:46.774945 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:20:46.792790 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.018 seconds
+[0m18:20:46.795102 [debug] [Thread-1 (]: On test.dbt_dividend.not_null_dividend_history_ex_date.de91cddc0f: ROLLBACK
+[0m18:20:46.796034 [debug] [Thread-1 (]: On test.dbt_dividend.not_null_dividend_history_ex_date.de91cddc0f: Close
+[0m18:20:46.797334 [info ] [Thread-1 (]: 12 of 28 PASS not_null_dividend_history_ex_date ................................ [[32mPASS[0m in 0.04s]
+[0m18:20:46.798103 [debug] [Thread-1 (]: Finished running node test.dbt_dividend.not_null_dividend_history_ex_date.de91cddc0f
+[0m18:20:46.798628 [debug] [Thread-1 (]: Began running node test.dbt_dividend.not_null_dividend_history_ticker.5af7ca79e7
+[0m18:20:46.799084 [info ] [Thread-1 (]: 13 of 28 START test not_null_dividend_history_ticker ........................... [RUN]
+[0m18:20:46.799957 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dbt_dividend.not_null_dividend_history_ex_date.de91cddc0f, now test.dbt_dividend.not_null_dividend_history_ticker.5af7ca79e7)
+[0m18:20:46.800493 [debug] [Thread-1 (]: Began compiling node test.dbt_dividend.not_null_dividend_history_ticker.5af7ca79e7
+[0m18:20:46.807933 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_dividend.not_null_dividend_history_ticker.5af7ca79e7"
+[0m18:20:46.808819 [debug] [Thread-1 (]: Began executing node test.dbt_dividend.not_null_dividend_history_ticker.5af7ca79e7
+[0m18:20:46.811106 [debug] [Thread-1 (]: Writing runtime sql for node "test.dbt_dividend.not_null_dividend_history_ticker.5af7ca79e7"
+[0m18:20:46.811914 [debug] [Thread-1 (]: Using postgres connection "test.dbt_dividend.not_null_dividend_history_ticker.5af7ca79e7"
+[0m18:20:46.812439 [debug] [Thread-1 (]: On test.dbt_dividend.not_null_dividend_history_ticker.5af7ca79e7: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "dbt_dividend", "target_name": "dev", "node_id": "test.dbt_dividend.not_null_dividend_history_ticker.5af7ca79e7"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select ticker
+from "postgres"."public"."dividend_history"
+where ticker is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m18:20:46.812893 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:20:46.829201 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.016 seconds
+[0m18:20:46.831237 [debug] [Thread-1 (]: On test.dbt_dividend.not_null_dividend_history_ticker.5af7ca79e7: ROLLBACK
+[0m18:20:46.831972 [debug] [Thread-1 (]: On test.dbt_dividend.not_null_dividend_history_ticker.5af7ca79e7: Close
+[0m18:20:46.832983 [info ] [Thread-1 (]: 13 of 28 PASS not_null_dividend_history_ticker ................................. [[32mPASS[0m in 0.03s]
+[0m18:20:46.833755 [debug] [Thread-1 (]: Finished running node test.dbt_dividend.not_null_dividend_history_ticker.5af7ca79e7
+[0m18:20:46.834286 [debug] [Thread-1 (]: Began running node test.dbt_dividend.not_null_fct_dividend_performance_favorable_pct.10559c075c
+[0m18:20:46.834978 [info ] [Thread-1 (]: 14 of 28 START test not_null_fct_dividend_performance_favorable_pct ............ [RUN]
+[0m18:20:46.835645 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dbt_dividend.not_null_dividend_history_ticker.5af7ca79e7, now test.dbt_dividend.not_null_fct_dividend_performance_favorable_pct.10559c075c)
+[0m18:20:46.836218 [debug] [Thread-1 (]: Began compiling node test.dbt_dividend.not_null_fct_dividend_performance_favorable_pct.10559c075c
+[0m18:20:46.844465 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_dividend.not_null_fct_dividend_performance_favorable_pct.10559c075c"
+[0m18:20:46.845350 [debug] [Thread-1 (]: Began executing node test.dbt_dividend.not_null_fct_dividend_performance_favorable_pct.10559c075c
+[0m18:20:46.847768 [debug] [Thread-1 (]: Writing runtime sql for node "test.dbt_dividend.not_null_fct_dividend_performance_favorable_pct.10559c075c"
+[0m18:20:46.848628 [debug] [Thread-1 (]: Using postgres connection "test.dbt_dividend.not_null_fct_dividend_performance_favorable_pct.10559c075c"
+[0m18:20:46.849173 [debug] [Thread-1 (]: On test.dbt_dividend.not_null_fct_dividend_performance_favorable_pct.10559c075c: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "dbt_dividend", "target_name": "dev", "node_id": "test.dbt_dividend.not_null_fct_dividend_performance_favorable_pct.10559c075c"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select favorable_pct
+from "postgres"."public"."fct_dividend_performance"
+where favorable_pct is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m18:20:46.849674 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:20:46.865848 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.016 seconds
+[0m18:20:46.867810 [debug] [Thread-1 (]: On test.dbt_dividend.not_null_fct_dividend_performance_favorable_pct.10559c075c: ROLLBACK
+[0m18:20:46.868559 [debug] [Thread-1 (]: On test.dbt_dividend.not_null_fct_dividend_performance_favorable_pct.10559c075c: Close
+[0m18:20:46.869718 [info ] [Thread-1 (]: 14 of 28 PASS not_null_fct_dividend_performance_favorable_pct .................. [[32mPASS[0m in 0.03s]
+[0m18:20:46.870633 [debug] [Thread-1 (]: Finished running node test.dbt_dividend.not_null_fct_dividend_performance_favorable_pct.10559c075c
+[0m18:20:46.871217 [debug] [Thread-1 (]: Began running node test.dbt_dividend.not_null_fct_dividend_performance_ticker.eda5a429af
+[0m18:20:46.871732 [info ] [Thread-1 (]: 15 of 28 START test not_null_fct_dividend_performance_ticker ................... [RUN]
+[0m18:20:46.872371 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dbt_dividend.not_null_fct_dividend_performance_favorable_pct.10559c075c, now test.dbt_dividend.not_null_fct_dividend_performance_ticker.eda5a429af)
+[0m18:20:46.872855 [debug] [Thread-1 (]: Began compiling node test.dbt_dividend.not_null_fct_dividend_performance_ticker.eda5a429af
+[0m18:20:46.880266 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_dividend.not_null_fct_dividend_performance_ticker.eda5a429af"
+[0m18:20:46.881249 [debug] [Thread-1 (]: Began executing node test.dbt_dividend.not_null_fct_dividend_performance_ticker.eda5a429af
+[0m18:20:46.883725 [debug] [Thread-1 (]: Writing runtime sql for node "test.dbt_dividend.not_null_fct_dividend_performance_ticker.eda5a429af"
+[0m18:20:46.884577 [debug] [Thread-1 (]: Using postgres connection "test.dbt_dividend.not_null_fct_dividend_performance_ticker.eda5a429af"
+[0m18:20:46.885127 [debug] [Thread-1 (]: On test.dbt_dividend.not_null_fct_dividend_performance_ticker.eda5a429af: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "dbt_dividend", "target_name": "dev", "node_id": "test.dbt_dividend.not_null_fct_dividend_performance_ticker.eda5a429af"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select ticker
+from "postgres"."public"."fct_dividend_performance"
+where ticker is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m18:20:46.885618 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:20:46.901018 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.015 seconds
+[0m18:20:46.903045 [debug] [Thread-1 (]: On test.dbt_dividend.not_null_fct_dividend_performance_ticker.eda5a429af: ROLLBACK
+[0m18:20:46.903996 [debug] [Thread-1 (]: On test.dbt_dividend.not_null_fct_dividend_performance_ticker.eda5a429af: Close
+[0m18:20:46.905224 [info ] [Thread-1 (]: 15 of 28 PASS not_null_fct_dividend_performance_ticker ......................... [[32mPASS[0m in 0.03s]
+[0m18:20:46.905979 [debug] [Thread-1 (]: Finished running node test.dbt_dividend.not_null_fct_dividend_performance_ticker.eda5a429af
+[0m18:20:46.906501 [debug] [Thread-1 (]: Began running node test.dbt_dividend.not_null_fct_dividend_performance_total_events.c33fa3fb37
+[0m18:20:46.906996 [info ] [Thread-1 (]: 16 of 28 START test not_null_fct_dividend_performance_total_events ............. [RUN]
+[0m18:20:46.907638 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dbt_dividend.not_null_fct_dividend_performance_ticker.eda5a429af, now test.dbt_dividend.not_null_fct_dividend_performance_total_events.c33fa3fb37)
+[0m18:20:46.908129 [debug] [Thread-1 (]: Began compiling node test.dbt_dividend.not_null_fct_dividend_performance_total_events.c33fa3fb37
+[0m18:20:46.916488 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_dividend.not_null_fct_dividend_performance_total_events.c33fa3fb37"
+[0m18:20:46.917386 [debug] [Thread-1 (]: Began executing node test.dbt_dividend.not_null_fct_dividend_performance_total_events.c33fa3fb37
+[0m18:20:46.919672 [debug] [Thread-1 (]: Writing runtime sql for node "test.dbt_dividend.not_null_fct_dividend_performance_total_events.c33fa3fb37"
+[0m18:20:46.920522 [debug] [Thread-1 (]: Using postgres connection "test.dbt_dividend.not_null_fct_dividend_performance_total_events.c33fa3fb37"
+[0m18:20:46.921135 [debug] [Thread-1 (]: On test.dbt_dividend.not_null_fct_dividend_performance_total_events.c33fa3fb37: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "dbt_dividend", "target_name": "dev", "node_id": "test.dbt_dividend.not_null_fct_dividend_performance_total_events.c33fa3fb37"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select total_events
+from "postgres"."public"."fct_dividend_performance"
+where total_events is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m18:20:46.921641 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:20:46.942441 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.021 seconds
+[0m18:20:46.945325 [debug] [Thread-1 (]: On test.dbt_dividend.not_null_fct_dividend_performance_total_events.c33fa3fb37: ROLLBACK
+[0m18:20:46.946515 [debug] [Thread-1 (]: On test.dbt_dividend.not_null_fct_dividend_performance_total_events.c33fa3fb37: Close
+[0m18:20:46.947899 [info ] [Thread-1 (]: 16 of 28 PASS not_null_fct_dividend_performance_total_events ................... [[32mPASS[0m in 0.04s]
+[0m18:20:46.948875 [debug] [Thread-1 (]: Finished running node test.dbt_dividend.not_null_fct_dividend_performance_total_events.c33fa3fb37
+[0m18:20:46.949470 [debug] [Thread-1 (]: Began running node test.dbt_dividend.not_null_stg_dividend_events_dividend_amount.1100a44eff
+[0m18:20:46.950085 [info ] [Thread-1 (]: 17 of 28 START test not_null_stg_dividend_events_dividend_amount ............... [RUN]
+[0m18:20:46.950890 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dbt_dividend.not_null_fct_dividend_performance_total_events.c33fa3fb37, now test.dbt_dividend.not_null_stg_dividend_events_dividend_amount.1100a44eff)
+[0m18:20:46.951421 [debug] [Thread-1 (]: Began compiling node test.dbt_dividend.not_null_stg_dividend_events_dividend_amount.1100a44eff
+[0m18:20:46.959715 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_dividend.not_null_stg_dividend_events_dividend_amount.1100a44eff"
+[0m18:20:46.960841 [debug] [Thread-1 (]: Began executing node test.dbt_dividend.not_null_stg_dividend_events_dividend_amount.1100a44eff
+[0m18:20:46.965430 [debug] [Thread-1 (]: Writing runtime sql for node "test.dbt_dividend.not_null_stg_dividend_events_dividend_amount.1100a44eff"
+[0m18:20:46.966518 [debug] [Thread-1 (]: Using postgres connection "test.dbt_dividend.not_null_stg_dividend_events_dividend_amount.1100a44eff"
+[0m18:20:46.967418 [debug] [Thread-1 (]: On test.dbt_dividend.not_null_stg_dividend_events_dividend_amount.1100a44eff: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "dbt_dividend", "target_name": "dev", "node_id": "test.dbt_dividend.not_null_stg_dividend_events_dividend_amount.1100a44eff"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select dividend_amount
+from "postgres"."public"."stg_dividend_events"
+where dividend_amount is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m18:20:46.968181 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:20:46.985413 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.017 seconds
+[0m18:20:46.988013 [debug] [Thread-1 (]: On test.dbt_dividend.not_null_stg_dividend_events_dividend_amount.1100a44eff: ROLLBACK
+[0m18:20:46.989276 [debug] [Thread-1 (]: On test.dbt_dividend.not_null_stg_dividend_events_dividend_amount.1100a44eff: Close
+[0m18:20:46.990530 [info ] [Thread-1 (]: 17 of 28 PASS not_null_stg_dividend_events_dividend_amount ..................... [[32mPASS[0m in 0.04s]
+[0m18:20:46.991426 [debug] [Thread-1 (]: Finished running node test.dbt_dividend.not_null_stg_dividend_events_dividend_amount.1100a44eff
+[0m18:20:46.991993 [debug] [Thread-1 (]: Began running node test.dbt_dividend.not_null_stg_dividend_events_ex_date.7d81ea323d
+[0m18:20:46.992547 [info ] [Thread-1 (]: 18 of 28 START test not_null_stg_dividend_events_ex_date ....................... [RUN]
+[0m18:20:46.993563 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dbt_dividend.not_null_stg_dividend_events_dividend_amount.1100a44eff, now test.dbt_dividend.not_null_stg_dividend_events_ex_date.7d81ea323d)
+[0m18:20:46.994335 [debug] [Thread-1 (]: Began compiling node test.dbt_dividend.not_null_stg_dividend_events_ex_date.7d81ea323d
+[0m18:20:47.004362 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_dividend.not_null_stg_dividend_events_ex_date.7d81ea323d"
+[0m18:20:47.005292 [debug] [Thread-1 (]: Began executing node test.dbt_dividend.not_null_stg_dividend_events_ex_date.7d81ea323d
+[0m18:20:47.007633 [debug] [Thread-1 (]: Writing runtime sql for node "test.dbt_dividend.not_null_stg_dividend_events_ex_date.7d81ea323d"
+[0m18:20:47.008491 [debug] [Thread-1 (]: Using postgres connection "test.dbt_dividend.not_null_stg_dividend_events_ex_date.7d81ea323d"
+[0m18:20:47.009296 [debug] [Thread-1 (]: On test.dbt_dividend.not_null_stg_dividend_events_ex_date.7d81ea323d: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "dbt_dividend", "target_name": "dev", "node_id": "test.dbt_dividend.not_null_stg_dividend_events_ex_date.7d81ea323d"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select ex_date
+from "postgres"."public"."stg_dividend_events"
+where ex_date is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m18:20:47.009821 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:20:47.027615 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.018 seconds
+[0m18:20:47.029616 [debug] [Thread-1 (]: On test.dbt_dividend.not_null_stg_dividend_events_ex_date.7d81ea323d: ROLLBACK
+[0m18:20:47.030538 [debug] [Thread-1 (]: On test.dbt_dividend.not_null_stg_dividend_events_ex_date.7d81ea323d: Close
+[0m18:20:47.031696 [info ] [Thread-1 (]: 18 of 28 PASS not_null_stg_dividend_events_ex_date ............................. [[32mPASS[0m in 0.04s]
+[0m18:20:47.033004 [debug] [Thread-1 (]: Finished running node test.dbt_dividend.not_null_stg_dividend_events_ex_date.7d81ea323d
+[0m18:20:47.033584 [debug] [Thread-1 (]: Began running node test.dbt_dividend.not_null_stg_dividend_events_ticker.f05065be23
+[0m18:20:47.034332 [info ] [Thread-1 (]: 19 of 28 START test not_null_stg_dividend_events_ticker ........................ [RUN]
+[0m18:20:47.035487 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dbt_dividend.not_null_stg_dividend_events_ex_date.7d81ea323d, now test.dbt_dividend.not_null_stg_dividend_events_ticker.f05065be23)
+[0m18:20:47.035997 [debug] [Thread-1 (]: Began compiling node test.dbt_dividend.not_null_stg_dividend_events_ticker.f05065be23
+[0m18:20:47.043495 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_dividend.not_null_stg_dividend_events_ticker.f05065be23"
+[0m18:20:47.044426 [debug] [Thread-1 (]: Began executing node test.dbt_dividend.not_null_stg_dividend_events_ticker.f05065be23
+[0m18:20:47.046708 [debug] [Thread-1 (]: Writing runtime sql for node "test.dbt_dividend.not_null_stg_dividend_events_ticker.f05065be23"
+[0m18:20:47.047520 [debug] [Thread-1 (]: Using postgres connection "test.dbt_dividend.not_null_stg_dividend_events_ticker.f05065be23"
+[0m18:20:47.048060 [debug] [Thread-1 (]: On test.dbt_dividend.not_null_stg_dividend_events_ticker.f05065be23: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "dbt_dividend", "target_name": "dev", "node_id": "test.dbt_dividend.not_null_stg_dividend_events_ticker.f05065be23"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select ticker
+from "postgres"."public"."stg_dividend_events"
+where ticker is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m18:20:47.048550 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:20:47.063224 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.015 seconds
+[0m18:20:47.065532 [debug] [Thread-1 (]: On test.dbt_dividend.not_null_stg_dividend_events_ticker.f05065be23: ROLLBACK
+[0m18:20:47.066385 [debug] [Thread-1 (]: On test.dbt_dividend.not_null_stg_dividend_events_ticker.f05065be23: Close
+[0m18:20:47.067417 [info ] [Thread-1 (]: 19 of 28 PASS not_null_stg_dividend_events_ticker .............................. [[32mPASS[0m in 0.03s]
+[0m18:20:47.068230 [debug] [Thread-1 (]: Finished running node test.dbt_dividend.not_null_stg_dividend_events_ticker.f05065be23
+[0m18:20:47.069263 [debug] [Thread-1 (]: Began running node test.dbt_dividend.source_not_null_dividend_db_dividend_events_dividend_amount.e933679406
+[0m18:20:47.070421 [info ] [Thread-1 (]: 20 of 28 START test source_not_null_dividend_db_dividend_events_dividend_amount  [RUN]
+[0m18:20:47.071815 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dbt_dividend.not_null_stg_dividend_events_ticker.f05065be23, now test.dbt_dividend.source_not_null_dividend_db_dividend_events_dividend_amount.e933679406)
+[0m18:20:47.072724 [debug] [Thread-1 (]: Began compiling node test.dbt_dividend.source_not_null_dividend_db_dividend_events_dividend_amount.e933679406
+[0m18:20:47.081515 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_dividend.source_not_null_dividend_db_dividend_events_dividend_amount.e933679406"
+[0m18:20:47.082491 [debug] [Thread-1 (]: Began executing node test.dbt_dividend.source_not_null_dividend_db_dividend_events_dividend_amount.e933679406
+[0m18:20:47.085271 [debug] [Thread-1 (]: Writing runtime sql for node "test.dbt_dividend.source_not_null_dividend_db_dividend_events_dividend_amount.e933679406"
+[0m18:20:47.086367 [debug] [Thread-1 (]: Using postgres connection "test.dbt_dividend.source_not_null_dividend_db_dividend_events_dividend_amount.e933679406"
+[0m18:20:47.087038 [debug] [Thread-1 (]: On test.dbt_dividend.source_not_null_dividend_db_dividend_events_dividend_amount.e933679406: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "dbt_dividend", "target_name": "dev", "node_id": "test.dbt_dividend.source_not_null_dividend_db_dividend_events_dividend_amount.e933679406"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select dividend_amount
+from "postgres"."public"."dividend_events"
+where dividend_amount is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m18:20:47.087563 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:20:47.102070 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.014 seconds
+[0m18:20:47.104146 [debug] [Thread-1 (]: On test.dbt_dividend.source_not_null_dividend_db_dividend_events_dividend_amount.e933679406: ROLLBACK
+[0m18:20:47.105290 [debug] [Thread-1 (]: On test.dbt_dividend.source_not_null_dividend_db_dividend_events_dividend_amount.e933679406: Close
+[0m18:20:47.106502 [info ] [Thread-1 (]: 20 of 28 PASS source_not_null_dividend_db_dividend_events_dividend_amount ...... [[32mPASS[0m in 0.03s]
+[0m18:20:47.107464 [debug] [Thread-1 (]: Finished running node test.dbt_dividend.source_not_null_dividend_db_dividend_events_dividend_amount.e933679406
+[0m18:20:47.108475 [debug] [Thread-1 (]: Began running node test.dbt_dividend.source_not_null_dividend_db_dividend_events_ex_date.f5152e95d5
+[0m18:20:47.109440 [info ] [Thread-1 (]: 21 of 28 START test source_not_null_dividend_db_dividend_events_ex_date ........ [RUN]
+[0m18:20:47.110576 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dbt_dividend.source_not_null_dividend_db_dividend_events_dividend_amount.e933679406, now test.dbt_dividend.source_not_null_dividend_db_dividend_events_ex_date.f5152e95d5)
+[0m18:20:47.111328 [debug] [Thread-1 (]: Began compiling node test.dbt_dividend.source_not_null_dividend_db_dividend_events_ex_date.f5152e95d5
+[0m18:20:47.118950 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_dividend.source_not_null_dividend_db_dividend_events_ex_date.f5152e95d5"
+[0m18:20:47.119984 [debug] [Thread-1 (]: Began executing node test.dbt_dividend.source_not_null_dividend_db_dividend_events_ex_date.f5152e95d5
+[0m18:20:47.122406 [debug] [Thread-1 (]: Writing runtime sql for node "test.dbt_dividend.source_not_null_dividend_db_dividend_events_ex_date.f5152e95d5"
+[0m18:20:47.123340 [debug] [Thread-1 (]: Using postgres connection "test.dbt_dividend.source_not_null_dividend_db_dividend_events_ex_date.f5152e95d5"
+[0m18:20:47.123889 [debug] [Thread-1 (]: On test.dbt_dividend.source_not_null_dividend_db_dividend_events_ex_date.f5152e95d5: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "dbt_dividend", "target_name": "dev", "node_id": "test.dbt_dividend.source_not_null_dividend_db_dividend_events_ex_date.f5152e95d5"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select ex_date
+from "postgres"."public"."dividend_events"
+where ex_date is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m18:20:47.124382 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:20:47.151532 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.027 seconds
+[0m18:20:47.157878 [debug] [Thread-1 (]: On test.dbt_dividend.source_not_null_dividend_db_dividend_events_ex_date.f5152e95d5: ROLLBACK
+[0m18:20:47.160440 [debug] [Thread-1 (]: On test.dbt_dividend.source_not_null_dividend_db_dividend_events_ex_date.f5152e95d5: Close
+[0m18:20:47.163607 [info ] [Thread-1 (]: 21 of 28 PASS source_not_null_dividend_db_dividend_events_ex_date .............. [[32mPASS[0m in 0.05s]
+[0m18:20:47.165988 [debug] [Thread-1 (]: Finished running node test.dbt_dividend.source_not_null_dividend_db_dividend_events_ex_date.f5152e95d5
+[0m18:20:47.167664 [debug] [Thread-1 (]: Began running node test.dbt_dividend.source_not_null_dividend_db_dividend_events_id.17003069b4
+[0m18:20:47.169253 [info ] [Thread-1 (]: 22 of 28 START test source_not_null_dividend_db_dividend_events_id ............. [RUN]
+[0m18:20:47.171298 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dbt_dividend.source_not_null_dividend_db_dividend_events_ex_date.f5152e95d5, now test.dbt_dividend.source_not_null_dividend_db_dividend_events_id.17003069b4)
+[0m18:20:47.172800 [debug] [Thread-1 (]: Began compiling node test.dbt_dividend.source_not_null_dividend_db_dividend_events_id.17003069b4
+[0m18:20:47.189039 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_dividend.source_not_null_dividend_db_dividend_events_id.17003069b4"
+[0m18:20:47.190212 [debug] [Thread-1 (]: Began executing node test.dbt_dividend.source_not_null_dividend_db_dividend_events_id.17003069b4
+[0m18:20:47.193346 [debug] [Thread-1 (]: Writing runtime sql for node "test.dbt_dividend.source_not_null_dividend_db_dividend_events_id.17003069b4"
+[0m18:20:47.194686 [debug] [Thread-1 (]: Using postgres connection "test.dbt_dividend.source_not_null_dividend_db_dividend_events_id.17003069b4"
+[0m18:20:47.195721 [debug] [Thread-1 (]: On test.dbt_dividend.source_not_null_dividend_db_dividend_events_id.17003069b4: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "dbt_dividend", "target_name": "dev", "node_id": "test.dbt_dividend.source_not_null_dividend_db_dividend_events_id.17003069b4"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select id
+from "postgres"."public"."dividend_events"
+where id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m18:20:47.196687 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:20:47.215505 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.018 seconds
+[0m18:20:47.219520 [debug] [Thread-1 (]: On test.dbt_dividend.source_not_null_dividend_db_dividend_events_id.17003069b4: ROLLBACK
+[0m18:20:47.221347 [debug] [Thread-1 (]: On test.dbt_dividend.source_not_null_dividend_db_dividend_events_id.17003069b4: Close
+[0m18:20:47.223862 [info ] [Thread-1 (]: 22 of 28 PASS source_not_null_dividend_db_dividend_events_id ................... [[32mPASS[0m in 0.05s]
+[0m18:20:47.225528 [debug] [Thread-1 (]: Finished running node test.dbt_dividend.source_not_null_dividend_db_dividend_events_id.17003069b4
+[0m18:20:47.227241 [debug] [Thread-1 (]: Began running node test.dbt_dividend.source_not_null_dividend_db_dividend_events_ticker.afbafd7861
+[0m18:20:47.228812 [info ] [Thread-1 (]: 23 of 28 START test source_not_null_dividend_db_dividend_events_ticker ......... [RUN]
+[0m18:20:47.229747 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dbt_dividend.source_not_null_dividend_db_dividend_events_id.17003069b4, now test.dbt_dividend.source_not_null_dividend_db_dividend_events_ticker.afbafd7861)
+[0m18:20:47.230382 [debug] [Thread-1 (]: Began compiling node test.dbt_dividend.source_not_null_dividend_db_dividend_events_ticker.afbafd7861
+[0m18:20:47.239005 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_dividend.source_not_null_dividend_db_dividend_events_ticker.afbafd7861"
+[0m18:20:47.240126 [debug] [Thread-1 (]: Began executing node test.dbt_dividend.source_not_null_dividend_db_dividend_events_ticker.afbafd7861
+[0m18:20:47.243083 [debug] [Thread-1 (]: Writing runtime sql for node "test.dbt_dividend.source_not_null_dividend_db_dividend_events_ticker.afbafd7861"
+[0m18:20:47.244099 [debug] [Thread-1 (]: Using postgres connection "test.dbt_dividend.source_not_null_dividend_db_dividend_events_ticker.afbafd7861"
+[0m18:20:47.244660 [debug] [Thread-1 (]: On test.dbt_dividend.source_not_null_dividend_db_dividend_events_ticker.afbafd7861: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "dbt_dividend", "target_name": "dev", "node_id": "test.dbt_dividend.source_not_null_dividend_db_dividend_events_ticker.afbafd7861"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select ticker
+from "postgres"."public"."dividend_events"
+where ticker is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m18:20:47.245134 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:20:47.268748 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.023 seconds
+[0m18:20:47.272044 [debug] [Thread-1 (]: On test.dbt_dividend.source_not_null_dividend_db_dividend_events_ticker.afbafd7861: ROLLBACK
+[0m18:20:47.273057 [debug] [Thread-1 (]: On test.dbt_dividend.source_not_null_dividend_db_dividend_events_ticker.afbafd7861: Close
+[0m18:20:47.274282 [info ] [Thread-1 (]: 23 of 28 PASS source_not_null_dividend_db_dividend_events_ticker ............... [[32mPASS[0m in 0.04s]
+[0m18:20:47.275198 [debug] [Thread-1 (]: Finished running node test.dbt_dividend.source_not_null_dividend_db_dividend_events_ticker.afbafd7861
+[0m18:20:47.275930 [debug] [Thread-1 (]: Began running node test.dbt_dividend.source_not_null_dividend_db_nasdaq_dividend_tickers_ticker.21c3061bc8
+[0m18:20:47.276756 [info ] [Thread-1 (]: 24 of 28 START test source_not_null_dividend_db_nasdaq_dividend_tickers_ticker . [RUN]
+[0m18:20:47.277526 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dbt_dividend.source_not_null_dividend_db_dividend_events_ticker.afbafd7861, now test.dbt_dividend.source_not_null_dividend_db_nasdaq_dividend_tickers_ticker.21c3061bc8)
+[0m18:20:47.278036 [debug] [Thread-1 (]: Began compiling node test.dbt_dividend.source_not_null_dividend_db_nasdaq_dividend_tickers_ticker.21c3061bc8
+[0m18:20:47.289109 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_dividend.source_not_null_dividend_db_nasdaq_dividend_tickers_ticker.21c3061bc8"
+[0m18:20:47.291678 [debug] [Thread-1 (]: Began executing node test.dbt_dividend.source_not_null_dividend_db_nasdaq_dividend_tickers_ticker.21c3061bc8
+[0m18:20:47.297502 [debug] [Thread-1 (]: Writing runtime sql for node "test.dbt_dividend.source_not_null_dividend_db_nasdaq_dividend_tickers_ticker.21c3061bc8"
+[0m18:20:47.298936 [debug] [Thread-1 (]: Using postgres connection "test.dbt_dividend.source_not_null_dividend_db_nasdaq_dividend_tickers_ticker.21c3061bc8"
+[0m18:20:47.299839 [debug] [Thread-1 (]: On test.dbt_dividend.source_not_null_dividend_db_nasdaq_dividend_tickers_ticker.21c3061bc8: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "dbt_dividend", "target_name": "dev", "node_id": "test.dbt_dividend.source_not_null_dividend_db_nasdaq_dividend_tickers_ticker.21c3061bc8"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select ticker
+from "postgres"."public"."nasdaq_dividend_tickers"
+where ticker is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m18:20:47.300560 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:20:47.315336 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.015 seconds
+[0m18:20:47.317393 [debug] [Thread-1 (]: On test.dbt_dividend.source_not_null_dividend_db_nasdaq_dividend_tickers_ticker.21c3061bc8: ROLLBACK
+[0m18:20:47.318305 [debug] [Thread-1 (]: On test.dbt_dividend.source_not_null_dividend_db_nasdaq_dividend_tickers_ticker.21c3061bc8: Close
+[0m18:20:47.319374 [info ] [Thread-1 (]: 24 of 28 PASS source_not_null_dividend_db_nasdaq_dividend_tickers_ticker ....... [[32mPASS[0m in 0.04s]
+[0m18:20:47.320854 [debug] [Thread-1 (]: Finished running node test.dbt_dividend.source_not_null_dividend_db_nasdaq_dividend_tickers_ticker.21c3061bc8
+[0m18:20:47.321515 [debug] [Thread-1 (]: Began running node test.dbt_dividend.source_unique_dividend_db_dividend_events_id.b2da256e69
+[0m18:20:47.322025 [info ] [Thread-1 (]: 25 of 28 START test source_unique_dividend_db_dividend_events_id ............... [RUN]
+[0m18:20:47.322879 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dbt_dividend.source_not_null_dividend_db_nasdaq_dividend_tickers_ticker.21c3061bc8, now test.dbt_dividend.source_unique_dividend_db_dividend_events_id.b2da256e69)
+[0m18:20:47.324099 [debug] [Thread-1 (]: Began compiling node test.dbt_dividend.source_unique_dividend_db_dividend_events_id.b2da256e69
+[0m18:20:47.337555 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_dividend.source_unique_dividend_db_dividend_events_id.b2da256e69"
+[0m18:20:47.338489 [debug] [Thread-1 (]: Began executing node test.dbt_dividend.source_unique_dividend_db_dividend_events_id.b2da256e69
+[0m18:20:47.340813 [debug] [Thread-1 (]: Writing runtime sql for node "test.dbt_dividend.source_unique_dividend_db_dividend_events_id.b2da256e69"
+[0m18:20:47.341690 [debug] [Thread-1 (]: Using postgres connection "test.dbt_dividend.source_unique_dividend_db_dividend_events_id.b2da256e69"
+[0m18:20:47.342259 [debug] [Thread-1 (]: On test.dbt_dividend.source_unique_dividend_db_dividend_events_id.b2da256e69: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "dbt_dividend", "target_name": "dev", "node_id": "test.dbt_dividend.source_unique_dividend_db_dividend_events_id.b2da256e69"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    id as unique_field,
+    count(*) as n_records
+
+from "postgres"."public"."dividend_events"
+where id is not null
+group by id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m18:20:47.342777 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:20:47.363853 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.021 seconds
+[0m18:20:47.365852 [debug] [Thread-1 (]: On test.dbt_dividend.source_unique_dividend_db_dividend_events_id.b2da256e69: ROLLBACK
+[0m18:20:47.366777 [debug] [Thread-1 (]: On test.dbt_dividend.source_unique_dividend_db_dividend_events_id.b2da256e69: Close
+[0m18:20:47.367965 [info ] [Thread-1 (]: 25 of 28 PASS source_unique_dividend_db_dividend_events_id ..................... [[32mPASS[0m in 0.05s]
+[0m18:20:47.368786 [debug] [Thread-1 (]: Finished running node test.dbt_dividend.source_unique_dividend_db_dividend_events_id.b2da256e69
+[0m18:20:47.369333 [debug] [Thread-1 (]: Began running node test.dbt_dividend.source_unique_dividend_db_nasdaq_dividend_tickers_ticker.0fcb3bc503
+[0m18:20:47.369933 [info ] [Thread-1 (]: 26 of 28 START test source_unique_dividend_db_nasdaq_dividend_tickers_ticker ... [RUN]
+[0m18:20:47.370568 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dbt_dividend.source_unique_dividend_db_dividend_events_id.b2da256e69, now test.dbt_dividend.source_unique_dividend_db_nasdaq_dividend_tickers_ticker.0fcb3bc503)
+[0m18:20:47.371055 [debug] [Thread-1 (]: Began compiling node test.dbt_dividend.source_unique_dividend_db_nasdaq_dividend_tickers_ticker.0fcb3bc503
+[0m18:20:47.379150 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_dividend.source_unique_dividend_db_nasdaq_dividend_tickers_ticker.0fcb3bc503"
+[0m18:20:47.380135 [debug] [Thread-1 (]: Began executing node test.dbt_dividend.source_unique_dividend_db_nasdaq_dividend_tickers_ticker.0fcb3bc503
+[0m18:20:47.382617 [debug] [Thread-1 (]: Writing runtime sql for node "test.dbt_dividend.source_unique_dividend_db_nasdaq_dividend_tickers_ticker.0fcb3bc503"
+[0m18:20:47.383524 [debug] [Thread-1 (]: Using postgres connection "test.dbt_dividend.source_unique_dividend_db_nasdaq_dividend_tickers_ticker.0fcb3bc503"
+[0m18:20:47.384163 [debug] [Thread-1 (]: On test.dbt_dividend.source_unique_dividend_db_nasdaq_dividend_tickers_ticker.0fcb3bc503: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "dbt_dividend", "target_name": "dev", "node_id": "test.dbt_dividend.source_unique_dividend_db_nasdaq_dividend_tickers_ticker.0fcb3bc503"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    ticker as unique_field,
+    count(*) as n_records
+
+from "postgres"."public"."nasdaq_dividend_tickers"
+where ticker is not null
+group by ticker
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m18:20:47.384675 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:20:47.401434 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.016 seconds
+[0m18:20:47.403521 [debug] [Thread-1 (]: On test.dbt_dividend.source_unique_dividend_db_nasdaq_dividend_tickers_ticker.0fcb3bc503: ROLLBACK
+[0m18:20:47.404386 [debug] [Thread-1 (]: On test.dbt_dividend.source_unique_dividend_db_nasdaq_dividend_tickers_ticker.0fcb3bc503: Close
+[0m18:20:47.405434 [info ] [Thread-1 (]: 26 of 28 PASS source_unique_dividend_db_nasdaq_dividend_tickers_ticker ......... [[32mPASS[0m in 0.03s]
+[0m18:20:47.406305 [debug] [Thread-1 (]: Finished running node test.dbt_dividend.source_unique_dividend_db_nasdaq_dividend_tickers_ticker.0fcb3bc503
+[0m18:20:47.406930 [debug] [Thread-1 (]: Began running node test.dbt_dividend.unique_best_dividend_tickers_ticker.4fe3e527fb
+[0m18:20:47.407921 [info ] [Thread-1 (]: 27 of 28 START test unique_best_dividend_tickers_ticker ........................ [RUN]
+[0m18:20:47.409292 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dbt_dividend.source_unique_dividend_db_nasdaq_dividend_tickers_ticker.0fcb3bc503, now test.dbt_dividend.unique_best_dividend_tickers_ticker.4fe3e527fb)
+[0m18:20:47.410321 [debug] [Thread-1 (]: Began compiling node test.dbt_dividend.unique_best_dividend_tickers_ticker.4fe3e527fb
+[0m18:20:47.423393 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_dividend.unique_best_dividend_tickers_ticker.4fe3e527fb"
+[0m18:20:47.426959 [debug] [Thread-1 (]: Began executing node test.dbt_dividend.unique_best_dividend_tickers_ticker.4fe3e527fb
+[0m18:20:47.435825 [debug] [Thread-1 (]: Writing runtime sql for node "test.dbt_dividend.unique_best_dividend_tickers_ticker.4fe3e527fb"
+[0m18:20:47.438696 [debug] [Thread-1 (]: Using postgres connection "test.dbt_dividend.unique_best_dividend_tickers_ticker.4fe3e527fb"
+[0m18:20:47.440145 [debug] [Thread-1 (]: On test.dbt_dividend.unique_best_dividend_tickers_ticker.4fe3e527fb: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "dbt_dividend", "target_name": "dev", "node_id": "test.dbt_dividend.unique_best_dividend_tickers_ticker.4fe3e527fb"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    ticker as unique_field,
+    count(*) as n_records
+
+from "postgres"."public"."best_dividend_tickers"
+where ticker is not null
+group by ticker
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m18:20:47.440830 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:20:47.459735 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.019 seconds
+[0m18:20:47.462034 [debug] [Thread-1 (]: On test.dbt_dividend.unique_best_dividend_tickers_ticker.4fe3e527fb: ROLLBACK
+[0m18:20:47.462889 [debug] [Thread-1 (]: On test.dbt_dividend.unique_best_dividend_tickers_ticker.4fe3e527fb: Close
+[0m18:20:47.463898 [info ] [Thread-1 (]: 27 of 28 PASS unique_best_dividend_tickers_ticker .............................. [[32mPASS[0m in 0.05s]
+[0m18:20:47.464645 [debug] [Thread-1 (]: Finished running node test.dbt_dividend.unique_best_dividend_tickers_ticker.4fe3e527fb
+[0m18:20:47.465151 [debug] [Thread-1 (]: Began running node test.dbt_dividend.unique_fct_dividend_performance_ticker.6bec177368
+[0m18:20:47.465651 [info ] [Thread-1 (]: 28 of 28 START test unique_fct_dividend_performance_ticker ..................... [RUN]
+[0m18:20:47.466309 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dbt_dividend.unique_best_dividend_tickers_ticker.4fe3e527fb, now test.dbt_dividend.unique_fct_dividend_performance_ticker.6bec177368)
+[0m18:20:47.466783 [debug] [Thread-1 (]: Began compiling node test.dbt_dividend.unique_fct_dividend_performance_ticker.6bec177368
+[0m18:20:47.475136 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_dividend.unique_fct_dividend_performance_ticker.6bec177368"
+[0m18:20:47.476080 [debug] [Thread-1 (]: Began executing node test.dbt_dividend.unique_fct_dividend_performance_ticker.6bec177368
+[0m18:20:47.478496 [debug] [Thread-1 (]: Writing runtime sql for node "test.dbt_dividend.unique_fct_dividend_performance_ticker.6bec177368"
+[0m18:20:47.479551 [debug] [Thread-1 (]: Using postgres connection "test.dbt_dividend.unique_fct_dividend_performance_ticker.6bec177368"
+[0m18:20:47.480263 [debug] [Thread-1 (]: On test.dbt_dividend.unique_fct_dividend_performance_ticker.6bec177368: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "dbt_dividend", "target_name": "dev", "node_id": "test.dbt_dividend.unique_fct_dividend_performance_ticker.6bec177368"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    ticker as unique_field,
+    count(*) as n_records
+
+from "postgres"."public"."fct_dividend_performance"
+where ticker is not null
+group by ticker
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m18:20:47.480965 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:20:47.507874 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.027 seconds
+[0m18:20:47.510255 [debug] [Thread-1 (]: On test.dbt_dividend.unique_fct_dividend_performance_ticker.6bec177368: ROLLBACK
+[0m18:20:47.511161 [debug] [Thread-1 (]: On test.dbt_dividend.unique_fct_dividend_performance_ticker.6bec177368: Close
+[0m18:20:47.512193 [info ] [Thread-1 (]: 28 of 28 PASS unique_fct_dividend_performance_ticker ........................... [[32mPASS[0m in 0.05s]
+[0m18:20:47.512946 [debug] [Thread-1 (]: Finished running node test.dbt_dividend.unique_fct_dividend_performance_ticker.6bec177368
+[0m18:20:47.515639 [debug] [MainThread]: On master: COMMIT
+[0m18:20:47.517072 [debug] [MainThread]: Using postgres connection "master"
+[0m18:20:47.518101 [debug] [MainThread]: On master: COMMIT
+[0m18:20:47.519360 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m18:20:47.548798 [debug] [MainThread]: SQL status: COMMIT in 0.029 seconds
+[0m18:20:47.549451 [debug] [MainThread]: On master: Close
+[0m18:20:47.550457 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m18:20:47.550948 [debug] [MainThread]: Connection 'test.dbt_dividend.unique_fct_dividend_performance_ticker.6bec177368' was properly closed.
+[0m18:20:47.551745 [info ] [MainThread]: 
+[0m18:20:47.552653 [info ] [MainThread]: Finished running 28 data tests in 0 hours 0 minutes and 1.56 seconds (1.56s).
+[0m18:20:47.558108 [debug] [MainThread]: Command end result
+[0m18:20:47.629916 [debug] [MainThread]: Wrote artifact WritableManifest to /home/pranays/Documents/Learning/Data-Engineering-Assignments/Day6/dbt_dividend/target/manifest.json
+[0m18:20:47.635735 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/pranays/Documents/Learning/Data-Engineering-Assignments/Day6/dbt_dividend/target/semantic_manifest.json
+[0m18:20:47.639409 [debug] [MainThread]: Wrote artifact OsiDocument to /home/pranays/Documents/Learning/Data-Engineering-Assignments/Day6/dbt_dividend/target/osi_document.json
+[0m18:20:47.650224 [debug] [MainThread]: Wrote artifact RunExecutionResult to /home/pranays/Documents/Learning/Data-Engineering-Assignments/Day6/dbt_dividend/target/run_results.json
+[0m18:20:47.650811 [info ] [MainThread]: 
+[0m18:20:47.651355 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m18:20:47.651809 [info ] [MainThread]: 
+[0m18:20:47.652272 [info ] [MainThread]: Done. PASS=28 WARN=0 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=28
+[0m18:20:47.653592 [debug] [MainThread]: Resource report: {"command_name": "test", "command_success": true, "command_wall_clock_time": 2.8159156, "process_in_blocks": "0", "process_kernel_time": 0.33122, "process_mem_max_rss": "142088", "process_out_blocks": "4696", "process_user_time": 4.1612}
+[0m18:20:47.654289 [debug] [MainThread]: Command `dbt test` succeeded at 18:20:47.654150 after 2.82 seconds
+[0m18:20:47.654792 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79c9c4022bd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79c9c19f7070>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79c9c19f7e30>]}
+[0m18:20:47.655302 [debug] [MainThread]: Flushing usage events
+[0m18:20:48.768213 [debug] [MainThread]: An error was encountered while trying to flush usage events

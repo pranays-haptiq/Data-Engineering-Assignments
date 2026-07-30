@@ -1,0 +1,50 @@
+version: 2
+
+models:
+  - name: fct_dividend_performance
+    description: "Per-ticker aggregation: how often price drop < dividend amount."
+    columns:
+      - name: ticker
+        tests: [unique, not_null]
+      - name: total_events
+        tests:
+          - not_null
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 1
+      - name: favorable_pct
+        tests:
+          - not_null
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+              max_value: 100
+      - name: avg_dividend
+        tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+              strictly: true
+
+  - name: best_dividend_tickers
+    description: "Top 2 tickers with highest favorable_pct (min 3 events)."
+    columns:
+      - name: ticker
+        tests: [unique, not_null]
+      - name: favorable_pct
+        tests:
+          - not_null
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+              max_value: 100
+
+  - name: dividend_history
+    description: "5-year event history for the 2 best tickers."
+    columns:
+      - name: ticker
+        tests: [not_null]
+      - name: ex_date
+        tests: [not_null]
+      - name: dividend_amount
+        tests:
+          - not_null
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+              strictly: true
