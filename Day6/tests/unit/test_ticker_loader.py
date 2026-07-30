@@ -1,7 +1,7 @@
 """Unit tests for dividend_analysis.ticker_loader."""
 from __future__ import annotations
 
-from datetime import date
+from datetime import date, timedelta
 from unittest.mock import MagicMock, patch
 
 import pandas as pd
@@ -115,6 +115,13 @@ class TestFilterTickersWithDividends:
             result = filter_tickers_with_dividends(["FAIL"], 2024)
         assert result == []
 
+    def test_excludes_ticker_with_empty_dividends(self):
+        mock_ticker = MagicMock()
+        mock_ticker.dividends = pd.Series(dtype=float)
+        with patch("dividend_analysis.ticker_loader.yf.Ticker", return_value=mock_ticker):
+            result = filter_tickers_with_dividends(["AAPL"], 2024)
+        assert "AAPL" not in result
+
 
 # ─── get_ticker_info ──────────────────────────────────────────────────────────
 
@@ -146,11 +153,10 @@ class TestGetDividendEvents:
         assert result.empty
 
     def test_calculates_price_drop_correctly(self):
-        divs_idx = pd.to_datetime(["2024-03-15"])
-        divs = pd.Series([0.25], index=divs_idx)
-
-        hist_idx = pd.to_datetime(["2024-03-14", "2024-03-15"])
-        hist = pd.DataFrame({"Close": [180.0, 179.8]}, index=hist_idx)
+        ex_date = date.today() - timedelta(days=90)
+        day_before = ex_date - timedelta(days=1)
+        divs = pd.Series([0.25], index=pd.to_datetime([ex_date]))
+        hist = pd.DataFrame({"Close": [180.0, 179.8]}, index=pd.to_datetime([day_before, ex_date]))
 
         mock_ticker = MagicMock()
         mock_ticker.dividends = divs
@@ -161,14 +167,13 @@ class TestGetDividendEvents:
 
         assert len(result) == 1
         assert result.iloc[0]["price_drop"] == pytest.approx(0.2, abs=1e-4)
-        assert result.iloc[0]["drop_less_than_div"] is True  # 0.2 < 0.25
+        assert result.iloc[0]["drop_less_than_div"] == True  # 0.2 < 0.25
 
     def test_drop_false_when_drop_exceeds_dividend(self):
-        divs_idx = pd.to_datetime(["2024-03-15"])
-        divs = pd.Series([0.10], index=divs_idx)
-
-        hist_idx = pd.to_datetime(["2024-03-14", "2024-03-15"])
-        hist = pd.DataFrame({"Close": [100.0, 99.5]}, index=hist_idx)
+        ex_date = date.today() - timedelta(days=90)
+        day_before = ex_date - timedelta(days=1)
+        divs = pd.Series([0.10], index=pd.to_datetime([ex_date]))
+        hist = pd.DataFrame({"Close": [100.0, 99.5]}, index=pd.to_datetime([day_before, ex_date]))
 
         mock_ticker = MagicMock()
         mock_ticker.dividends = divs
@@ -177,4 +182,33 @@ class TestGetDividendEvents:
         with patch("dividend_analysis.ticker_loader.yf.Ticker", return_value=mock_ticker):
             result = get_dividend_events("AAPL", years=1)
 
-        assert result.iloc[0]["drop_less_than_div"] is False  # 0.5 > 0.10
+        assert result.iloc[0]["drop_less_than_div"] == False  # 0.5 > 0.10
+
+    def test_returns_empty_when_hist_is_empty(self):
+        ex_date = date.today() - timedelta(days=90)
+        divs = pd.Series([0.25], index=pd.to_datetime([ex_date]))
+
+        mock_ticker = MagicMock()
+        mock_ticker.dividends = divs
+        mock_ticker.history.return_value = pd.DataFrame()
+
+        with patch("dividend_analysis.ticker_loader.yf.Ticker", return_value=mock_ticker):
+            result = get_dividend_events("AAPL", years=1)
+
+        assert result.empty
+
+    def test_skips_dividend_date_not_in_hist(self):
+        ex_date = date.today() - timedelta(days=90)
+        divs = pd.Series([0.25], index=pd.to_datetime([ex_date]))
+        # History only contains a date after ex_date, not the ex_date itself
+        other_date = ex_date + timedelta(days=5)
+        hist = pd.DataFrame({"Close": [180.0]}, index=pd.to_datetime([other_date]))
+
+        mock_ticker = MagicMock()
+        mock_ticker.dividends = divs
+        mock_ticker.history.return_value = hist
+
+        with patch("dividend_analysis.ticker_loader.yf.Ticker", return_value=mock_ticker):
+            result = get_dividend_events("AAPL", years=1)
+
+        assert result.empty

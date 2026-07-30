@@ -6,7 +6,7 @@ from unittest.mock import MagicMock, call, patch, ANY
 import pandas as pd
 import pytest
 
-from dividend_analysis.db_utils import create_tables, upsert_tickers, upsert_dividend_events
+from dividend_analysis.db_utils import create_tables, upsert_tickers, upsert_dividend_events, read_table
 
 
 MOCK_CONN_CTX = "dividend_analysis.db_utils.get_connection"
@@ -107,3 +107,19 @@ class TestUpsertDividendEvents:
                 upsert_dividend_events(df)
                 rows_arg = mock_ev.call_args[0][2]
                 assert len(rows_arg) == 2
+
+
+class TestReadTable:
+    def test_returns_dataframe(self):
+        expected_df = pd.DataFrame([{"ticker": "AAPL", "sector": "Technology"}])
+        mock_conn = MagicMock()
+        mock_engine = MagicMock()
+        mock_engine.connect.return_value.__enter__ = MagicMock(return_value=mock_conn)
+        mock_engine.connect.return_value.__exit__ = MagicMock(return_value=False)
+
+        with patch("dividend_analysis.db_utils.create_engine", return_value=mock_engine):
+            with patch("dividend_analysis.db_utils.pd.read_sql", return_value=expected_df):
+                result = read_table("nasdaq_dividend_tickers")
+
+        assert list(result.columns) == ["ticker", "sector"]
+        assert len(result) == 1
